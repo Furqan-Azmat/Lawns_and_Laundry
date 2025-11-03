@@ -30,3 +30,63 @@ body {
 
 .btn.red { background: var(--red); }
 
+#postAQuest {
+  position: absolute;
+  top: 600px;
+  left: 200px;
+}
+
+#becomeAdventurer {
+  position: absolute;
+  top: 600px;
+  left: 400px;
+}
+
+#services {
+  position: absolute;
+  top: 30px;
+  right: 150px;
+  transform: translateX(-50%);
+}
+
+#sign_login {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+}
+
+#banner_top {
+ position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100px;
+  background: #fff;
+  overflow: auto;
+  border-bottom: 5px solid black; /* use bottom border to avoid horizontal overflow */
+  z-index: 1000;
+}
+
+ #img_logo {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  width: 400px;
+  max-height: 80px;    /* keep it inside the 100px banner */
+  height: auto;
+  z-index: 1001;       /* ensure it sits above the banner background */
+  display: block;
+  }
+ 
+  #website_name{
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-size: 32px;
+  font-weight: bold;
+  color: black;
+  z-index: 1002;
+  }
