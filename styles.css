@@ -33,27 +33,33 @@ body {
 
 #postAQuest {
   position: absolute;
-  top: 600px;
-  left: 200px;
+  top: 650px;
+  left: 250px;
 }
 
 #becomeAdventurer {
   position: absolute;
-  top: 600px;
-  left: 400px;
+  top: 650px;
+  left: 450px;
 }
 
-#services {
+#services_link {
   position: absolute;
   top: 30px;
   right: 150px;
   transform: translateX(-50%);
 }
 
-#sign_login {
+#login_link {
   position: absolute;
   top: 30px;
   right: 40px;
+}
+
+#signup_link {
+  position: absolute;
+  top: 650px;
+  left: 450px;
 }
 
 #banner_top {
@@ -96,7 +102,7 @@ body {
 	position: relative;
 	background: #ff80c0;
 	border-radius: .4em;
-  bottom: 60px;
+  top: 100px;
   width: 800px;
   right: 350px;
   height: 400px;
