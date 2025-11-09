@@ -24,6 +24,7 @@ body {
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, Inter, Helvetica,
     Arial, sans-serif;
   color: var(--ink);
+  background-color: #c89666;
 }
 
 /* ===== Reusable UI ===== */
@@ -94,9 +95,9 @@ body {
   left: 0;
   right: 0;
   height: 100px;
-  background: #fff;
+  background: #12343b;
   z-index: 1000;
-  border-bottom: 1px solid var(--ring);
+  border-bottom: 1px solid black;
   display: grid;
   grid-template-columns: 280px 1fr 280px;
   align-items: center;
@@ -113,7 +114,7 @@ body {
   text-align: center;
   font-size: clamp(24px, 2.4vw, 32px);
   font-weight: 800;
-  color: #111827;
+  color: white;
 }
 #banner_top nav {
   display: flex;
@@ -139,7 +140,7 @@ main {
 }
 .speech-bubble {
   position: relative;
-  background: var(--accent);
+  background: #12343b;
   border-radius: 0.9rem;
   width: min(900px, 92vw);
   height: auto;
@@ -155,7 +156,7 @@ main {
   bottom: -50px;
   transform: translateY(-50%);
   border: 27px solid transparent;
-  border-left-color: var(--accent);
+  border-left-color: #12343b;
   transform: rotate(90deg);
 }
 .speech-bubble h1 {

@@ -1,37 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <h1>Sign Up</h1>
-    <form action="/submit" method="POST">
-        <div>
-            <label for="fullname">Full Name:</label>
-            <input type="text" id="fullname" name="fullname" required>
+  <header id="banner_top">
+    <div id="logo"><img id="img_logo" src="images/LawnsLogoPlaceholder.png" alt="Logo" /></div>
+    <p id="website_name">Lawns &amp; Laundry</p>
+    <nav><a href="index.html" class="btn" data-nav>Home</a></nav>
+  </header>
+
+  <main class="page-wrap">
+    <section class="card">
+      <h2>Create your account</h2>
+      <form id="signupForm" action="/submit" method="POST" class="form-grid" novalidate>
+        <div class="form-group">
+          <label for="fullname">Full Name</label>
+          <input id="fullname" name="fullname" type="text" autocomplete="name" required />
         </div>
-        <div>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required />
         </div>
-        <div>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <div style="display:flex; gap:.5rem; align-items:center;">
+            <input id="password" name="password" type="password" autocomplete="new-password" required minlength="6" />
+            <button type="button" class="btn pwd-toggle" data-for="password" aria-pressed="false">Show</button>
+          </div>
+          <p class="helper">Minimum 6 characters.</p>
         </div>
-        <div>
-            <label for="confirm-password">Confirm Password:</label>
-            <input type="password" id="confirm-password" name="confirm-password" required>
+
+        <div class="form-group">
+          <label for="confirm-password">Confirm Password</label>
+          <div style="display:flex; gap:.5rem; align-items:center;">
+            <input id="confirm-password" name="confirm-password" type="password" autocomplete="new-password" required />
+            <button type="button" class="btn pwd-toggle" data-for="confirm-password" aria-pressed="false">Show</button>
+          </div>
         </div>
-        <div>
-            <input type="submit" value="Sign Up">
+
+      </div class="form-group">
+          <label for="user-age">I want to sign up as a:</label>
+          <select id="user-age" name="user-type" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="adventurer">Adventurer (Service Provider)</option>
+            <option value="quester">Quester (Service Seeker)</option>
+          </select>
         </div>
-    </form>
-     <div class="back-button">
-        <a href="index.html" class="btn">Back to Main Page</a>
+
+        </div class="form-group">
+          <label for="user-type">Age:</label>
+          <select id="user-type" name="user-age" required>
+            <option value="" disabled selected>How old are you?</option>
+            <option value="adventurer">17 or under</option>
+            <option value="quester">18 or older</option>
+          </select>
+        </div>
+        
+        <!-- <div class="form-group">
+          <label>
+            <input type="checkbox" id="terms" name="terms" required />
+            I agree to the <a href="terms.html" target="_blank" rel="noopener">Terms and Conditions</a> *
+          </label> -->
+
+        <div class="form-actions">
+          <input type="submit" value="Sign Up" class="btn" />
+          <a class="btn btn-secondary" href="login.html">Back to Login</a>
+        </div>
+      </form>
+    </section>
+
+    <div class="back-button">
+      <a href="index.html" class="btn">Back to Main Page</a>
     </div>
+  </main>
+
+  <script src="script.js" defer></script>
 </body>
 </html>

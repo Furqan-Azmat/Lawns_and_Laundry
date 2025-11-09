@@ -1,30 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="styles.css">
-    <scripet src="script.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Login</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <div class="login-container">
-        <form class="login-form">
-            <h2>Login</h2>
-            <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <button type="submit">Login</button>
-            <p class="signup-link">Don't have an account? <a href="singup.html">Sign up</a></p>
-        </form>
-    </div>
+  <header id="banner_top">
+    <div id="logo"><img id="img_logo" src="images/LawnsLogoPlaceholder.png" alt="Logo" /></div>
+    <p id="website_name">Lawns &amp; Laundry</p>
+    <nav><a href="index.html" class="btn" data-nav>Home</a></nav>
+  </header>
+
+  <main class="page-wrap">
+    <section class="card">
+      <form class="login-form form-grid" novalidate>
+        <h2>Login</h2>
+
+        <div class="form-group">
+          <label for="username">Username *</label>
+          <input id="username" name="username" type="text" autocomplete="username" placeholder="Enter Username" required />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password *</label>
+          <div style="display:flex; gap:.5rem; align-items:center;">
+            <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Enter Password" required />
+            <button type="button" class="btn pwd-toggle" data-for="password" aria-pressed="false">Show</button>
+          </div>
+          <p class="helper">Tip: any non-empty credentials will work in this demo.</p>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn">Login</button>
+          <p class="helper">Don't have an account? <a href="signup.html">Sign up</a></p>
+        </div>
+      </form>
+    </section>
+
     <div class="back-button">
-        <a href="index.html" class="btn">Back to Main Page</a>
+      <a href="index.html" class="btn">Back to Main Page</a>
     </div>
+  </main>
+
+  <script src="script.js" defer></script>
 </body>
 </html>
