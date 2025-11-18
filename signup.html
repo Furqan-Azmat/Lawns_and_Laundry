@@ -44,29 +44,30 @@
           </div>
         </div>
 
-      </div class="form-group">
-          <label for="user-age">I want to sign up as a:</label>
-          <select id="user-age" name="user-type" required>
-            <option value="" disabled selected>Select an option</option>
-            <option value="adventurer">Adventurer (Service Provider)</option>
-            <option value="quester">Quester (Service Seeker)</option>
-          </select>
+      <div class="form-group">
+          <label for="user-type">I want to sign up as a...:</label>
+
+        <div id="user-type" class="radio-group" role="radiogroup" aria-labelledby="user-type-label" >
+
+          <input type="radio" name="user-type" id="Adventurer">
+          <label for="Adventurer">Adventurer</label>
+          
+          <input type="radio" name="user-type" id="QuestGiver">
+          <label for="QuestGiver">Quest Giver</label>
+
         </div>
 
-        </div class="form-group">
-          <label for="user-type">Age:</label>
-          <select id="user-type" name="user-age" required>
+        </div>
+
+        <div class="form-group">
+          <label for="user-age">Age:</label>
+          <select id="user-age" name="user-age" required>
             <option value="" disabled selected>How old are you?</option>
             <option value="underage">17 or under</option>
             <option value="adult">18 or older</option>
           </select>
         </div>
-        
-        <!-- <div class="form-group">
-          <label>
-            <input type="checkbox" id="terms" name="terms" required />
-            I agree to the <a href="terms.html" target="_blank" rel="noopener">Terms and Conditions</a> *
-          </label> -->
+
 
         <div class="form-actions">
           <input type="submit" value="Sign Up" class="btn" />
