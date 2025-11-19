@@ -1,0 +1,128 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quest Board | Lawns & Laundry</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header id="banner_top" role="banner" aria-label="Top navigation">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div id="logo" aria-label="Site logo">
+      <img id="img_logo" src="images/LawnsLogoPlaceholder.png" alt="Lawns &amp; Laundry logo" />
+    </div>
+    <p id="website_name" aria-label="Website name">Lawns &amp; Laundry</p>
+    <nav aria-label="Primary">
+      <a href="index.html" class="btn" data-nav>Home</a>
+      <a href="services.html" class="btn" data-nav>Services</a>
+      <a href="login.html" id="login_link" class="btn" data-nav>Login</a>
+    </nav>
+  </header>
+
+  <main id="main" class="quest-page" tabindex="-1">
+    <section class="quest-icons" aria-label="Quick actions">
+      <button class="icon-chip" aria-label="Favorites">Fav</button>
+      <button class="icon-chip" aria-label="Quest grid">Board</button>
+      <button class="icon-chip" aria-label="Community">Team</button>
+      <div class="icon-spacer" aria-hidden="true"></div>
+      <button class="icon-chip" aria-label="Notifications">
+        Bell<span class="badge">3</span>
+      </button>
+      <button class="icon-chip" aria-label="Profile">You</button>
+    </section>
+
+    <section class="quest-toolbar" aria-label="Location and search">
+      <div class="location-chip">
+        <span class="icon">Update icon later</span>
+        <div>
+          <p class="eyebrow">Current location</p>
+          <p class="title">Toronto, ON</p>
+        </div>
+      </div>
+      <div class="search-group">
+        <label class="input-icon" aria-label="Search quests">
+          <span class="icon">Search</span>
+          <input type="search" placeholder="Search quests" />
+        </label>
+        <button class="btn" aria-label="Filter quests" style="background-color: blueviolet;">Filters</button>
+      </div>
+    </section>
+
+    <section class="quest-board" aria-label="Quest board">
+      <header class="board-header">
+        <h1>Quest Board</h1>
+      </header>
+      <div class="board-content">
+        <div class="quest-list" role="list">
+          <button class="quest-pill active" role="listitem">
+            <span class="quest-title">Mow my lawn</span>
+            <span class="reward tag">$</span>
+            <span class="difficulty" aria-label="Easy">
+              <span class="dot green"></span>
+              <span class="dot gray"></span>
+              <span class="dot gray"></span>
+            </span>
+          </button>
+          <button class="quest-pill" role="listitem">
+            <span class="quest-title">Grocery run</span>
+            <span class="reward tag">$$</span>
+            <span class="difficulty" aria-label="Medium">
+              <span class="dot yellow"></span>
+              <span class="dot yellow"></span>
+              <span class="dot gray"></span>
+            </span>
+          </button>
+          <button class="quest-pill" role="listitem">
+            <span class="quest-title">Shovel snow</span>
+            <span class="reward tag">$$$</span>
+            <span class="difficulty" aria-label="Hard">
+              <span class="dot red"></span>
+              <span class="dot red"></span>
+              <span class="dot red"></span>
+            </span>
+          </button>
+        </div>
+        <div class="quest-divider" aria-hidden="true"></div>
+        <div class="quest-detail" aria-live="polite">
+          <header class="detail-header">
+            <div>
+              <p class="eyebrow">Featured</p>
+              <h2>Mow my lawn</h2>
+            </div>
+            <div class="detail-tags">
+              <span class="pill">Today</span>
+              <span class="pill">2 hrs</span>
+            </div>
+          </header>
+          <p class="detail-desc">Front and back yard need a trim and edge. Access to equipment provided.</p>
+          <div class="detail-meta">
+            <div>
+              <p class="eyebrow">Difficulty</p>
+              <div class="difficulty">
+                <span class="dot green"></span>
+                <span class="dot green"></span>
+                <span class="dot gray"></span>
+              </div>
+            </div>
+            <div>
+              <p class="eyebrow">Reward</p>
+              <p class="reward-amount">$45</p>
+            </div>
+          </div>
+          <div class="detail-actions">
+            <button class="btn">Accept</button>
+            <button class="btn btn-secondary">Message</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="post-cta">
+      <a class="btn wide" href="postquest.html">Post a new Quest</a>
+    </div>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
