@@ -346,7 +346,6 @@ select:focus-visible {
   padding: 1rem;
 }
 
-<<<<<<< HEAD
 .category-card {
   background: #fff;
   border: 1px solid #ddd;
@@ -381,7 +380,7 @@ select:focus-visible {
 .service-intro-text {
   text-align: center;
   margin: 2rem;
-=======
+}
 
 /* ===== Quest View (Quest Board) ===== */
 .quest-page {
@@ -697,5 +696,4 @@ select:focus-visible {
     flex-direction: column;
     align-items: stretch;
   }
->>>>>>> cb738d6b1353d4bbee5d45ca8df2564e90169c94
 }
