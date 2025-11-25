@@ -19,19 +19,26 @@
       padding: 2rem 4rem;
     }
 
-    .landing-layout {
-      display: flex;
-      gap: 2rem;
-      align-items: flex-start;
-      justify-content: space-between;
-    }
+ .landing-layout {
+  display: flex;
+  gap: 2.5rem;
+  align-items: stretch;
+  justify-content: center;  
+  max-width: 1100px;        
+  margin: 0 auto;           
+  padding: 2rem 0;
+}
+
 
     .landing-left {
-      flex: 1.2;
-      background: #ffffff;
-      border-radius: 12px;
-      padding: 1.5rem 2rem;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      flex: 0 0 500px;              
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.75rem 2rem;
+  box-shadow: 0 10px 28px rgba(2, 8, 23, 0.12);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
     }
 
     .landing-left h1 {
@@ -52,27 +59,22 @@
     }
 
     .cta-row .btn {
-      text-decoration: none;
+      
+  font-size: 1.05rem; 
+  padding: 14px 24px;
     }
 
     .landing-right {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+       flex: 0 0 500px;              
+  display: flex;
+  align-items: center;
+  justify-content: center;
     }
 
-    .landing-right figure {
-      margin: 0;
-      background: #ffffff;
-      border-radius: 999px;
-      padding: 1.5rem 2rem;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
-    }
 
     .landing-right img {
       display: block;
-      max-width: 220px;
+      max-width: 400px;
       height: auto;
       border-radius: 12px;
     }
@@ -112,8 +114,9 @@
       <section class="landing-left" aria-labelledby="heroTitle">
         <h1 id="heroTitle">Welcome to Lawns &amp; Laundry</h1>
         <p>Your friendly local guild for lawn care and laundry quests.</p>
-        <p>Post a quest for help, or become an adventurer and take on jobs in your area.</p>
-
+        <p>  Post a quest for mowing, gardening, washing, folding or an thing you need help with and our adventurers will take it on for you.</p>
+  <p>  Track your requests, chat with helpers, and build a trusted reputation in
+    your neighbourhood guild.  </p>
         <div class="cta-row">
           <a href="postquest.html" id="postAQuest" class="btn btn-primary" data-auth-required>
             Post A Quest
@@ -123,8 +126,7 @@
           </a>
         </div>
       </section>
-
-      <!-- RIGHT: receptionist image -->
+ 
       <aside class="landing-right" aria-label="Guild receptionist illustration">
         <figure>
           <img
