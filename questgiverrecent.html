@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quest Giver | Lawns & Laundry</title>
+    <link rel="stylesheet" href="styles.css" />
+
+</head>
+
+<body>
+
+    <main id="main" class="hub-layout" tabindex="-1">
+
+        <header id="banner_top" role="banner" aria-label="Top navigation">
+            <a class="skip-link" href="#main">Skip to content</a>
+            <div id="logo" aria-label="Site logo">
+                <img id="img_logo" src="images/LawnsLogoPlaceholder.png" alt="Lawns &amp; Laundry logo" />
+            </div>
+            <p id="website_name" aria-label="Website name">Lawns &amp; Laundry</p>
+            <nav aria-label="Primary">
+                <a href="index.html" class="btn" data-nav>Home</a>
+                <a href="services.html" class="btn" data-nav>Services</a>
+                <a href="login.html" id="login_link" class="btn" data-nav>Login</a>
+            </nav>
+        </header>
+
+        <!--sidebar 1 -->
+        <div class="sidebar sidebar-1">
+            <button class="icon-btn " onclick="location.href='questgiver.html'"><img
+                    src="images/navigation.png" /></button>
+            <button class="icon-btn" onclick="location.href='questgiversearch.html'"><img
+                    src="images/search.png" /></button>
+            <button class="icon-btn active" onclick="location.href='questgiverrecent.html'"><img
+                    src="images/clock.png" /></button>
+        </div>
+
+        <!--sidebar 2 + 3 -->
+        <div class="sidebar-group-search">
+            <h2 class="group-title">Recent Tabs</h2>
+            <div class="sidebar sidebar-23">
+                <a href="questgiverlisted.html">Listed Quests</a>
+                <a href="questgiverpast.html">Past Quests</a>
+                <a class="side-link active" href="questgiver.html">My Rating</a>
+            </div>
+        </div>
+
+
+        <!-- main card -->
+        <section class="card quest-hub" aria-label="Quest Giver Hub">
+            <div class="hub-layout">
+
+                <!--profile and rating -->
+                <section class="hub-profile">
+                    <div class="profile-summary">
+                        <img src="images/placeholder.png" alt="Profile picture" class="profile-pic" />
+                        <h3>Overall Rating</h3>
+                        <p class="rating-score">4.5 ★</p>
+                    </div>
+
+
+                    <!--testing-->
+                    <div class="rating-row">
+                        <div class="rating-bar">
+                            <div class="rating-fill" style="width: 90%;;"></div>
+                        </div>
+                        <label>★★★★★</label>
+                    </div>
+                    <div class="rating-row">
+                        <div class="rating-bar">
+                            <div class="rating-fill" style="width: 20%;;"></div>
+                        </div>
+                        <label>★★★★</label>
+                    </div>
+                    <div class="rating-row">
+                        <div class="rating-bar">
+                            <div class="rating-fill" style="width: 5%;;"></div>
+                        </div>
+                        <label>★★★</label>
+                    </div>
+                    <div class="rating-row">
+                        <div class="rating-bar">
+                            <div class="rating-fill" style="width: 3%;;"></div>
+                        </div>
+                        <label>★★</label>
+                    </div>
+                    <div class="rating-row">
+                        <div class="rating-bar">
+                            <div class="rating-fill" style="width: 5%;;"></div>
+                        </div>
+                        <label>★</label>
+                    </div>
+            </div>
+        </section>
+
+        </div>
+        </section>
+        </section>
+
+    </main>
+
+
+
+
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>
