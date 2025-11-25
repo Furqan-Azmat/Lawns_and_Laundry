@@ -6,13 +6,94 @@
   <meta name="description" content="Lawns & Laundry — your one-stop solution for lawn care and laundry." />
   <link rel="stylesheet" href="styles.css" />
   <title>Lawns & Laundry</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: #c8915d; 
+    }
+
+    main {
+      margin-top: 120px; 
+      padding: 2rem 4rem;
+    }
+
+    .landing-layout {
+      display: flex;
+      gap: 2rem;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    .landing-left {
+      flex: 1.2;
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 1.5rem 2rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .landing-left h1 {
+      margin-top: 0;
+      margin-bottom: 0.75rem;
+      font-size: 1.8rem;
+    }
+
+    .landing-left p {
+      margin: 0.25rem 0;
+      line-height: 1.4;
+    }
+
+    .cta-row {
+      margin-top: 1.5rem;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .cta-row .btn {
+      text-decoration: none;
+    }
+
+    .landing-right {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .landing-right figure {
+      margin: 0;
+      background: #ffffff;
+      border-radius: 999px;
+      padding: 1.5rem 2rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+    }
+
+    .landing-right img {
+      display: block;
+      max-width: 220px;
+      height: auto;
+      border-radius: 12px;
+    }
+
+    footer {
+      margin-top: 2rem;
+      padding: 1rem 2rem;
+      background-color: #12343b;
+      color: #ffffff;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
+
 <body>
-  <!-- Top banner / nav -->
   <header id="banner_top" role="banner" aria-label="Top navigation">
     <a class="skip-link" href="#main">Skip to content</a>
 
     <div id="logo" aria-label="Site logo">
+      <!-- You can replace this with your real logo image -->
       <img id="img_logo" src="images/LawnsLogoPlaceholder.png" alt="Lawns &amp; Laundry logo" />
     </div>
 
@@ -20,52 +101,55 @@
 
     <nav aria-label="Primary">
       <a href="services.html" id="services_link" class="btn" data-nav>Services</a>
-      <!-- Quest Board removed to match prototype -->
-      <a href="login.html" id="login_link" class="btn" data-nav>Login</a>
+      <!-- Quest Board removed -->
+      <a href="login.html" id="login_link" class="btn" data-nav>Signup / Login</a>
     </nav>
   </header>
 
   <main id="main" tabindex="-1">
-    <!-- Hero speech bubble -->
-    <section id="heroBanner" class="speech-bubble" aria-labelledby="heroTitle">
-      <h1 id="heroTitle">Welcome to Lawns &amp; Laundry!</h1>
-      <p>Your one-stop solution for all your lawn care and laundry needs.</p>
-    </section>
+    <div class="landing-layout">
+      <!-- LEFT: welcome text + buttons -->
+      <section class="landing-left" aria-labelledby="heroTitle">
+        <h1 id="heroTitle">Welcome to Lawns &amp; Laundry</h1>
+        <p>Your friendly local guild for lawn care and laundry quests.</p>
+        <p>Post a quest for help, or become an adventurer and take on jobs in your area.</p>
 
-    <!-- Receptionist illustration -->
-    <figure id="receptionist" aria-label="Receptionist illustration">
-      <!-- Replace with your actual receptionist art when ready -->
-      <img id="img_receptionist" src="images/GuildReceptionistPlaceholder.png" alt="Receptionist at the counter" />
-    </figure>
+        <div class="cta-row">
+          <a href="postquest.html" id="postAQuest" class="btn btn-primary" data-auth-required>
+            Post A Quest
+          </a>
+          <a href="signup.html" id="signup_link" class="btn btn-secondary">
+            Become An Adventurer
+          </a>
+        </div>
+      </section>
 
-    <!-- CTAs -->
-    <div class="cta-row">
-      <a href="postquest.html" id="postAQuest" class="btn btn-primary" data-auth-required>Post a Quest</a>
-      <a href="signup.html" id="signup_link" class="btn btn-secondary">Become an Adventurer</a>
+      <!-- RIGHT: receptionist image -->
+      <aside class="landing-right" aria-label="Guild receptionist illustration">
+        <figure>
+          <img
+            id="img_receptionist"
+            src="images/Guild_receptionist.jpeg"
+            alt="Guild receptionist sitting at the front desk"
+          />
+        </figure>
+      </aside>
     </div>
   </main>
 
-  <!-- Footer -->
+     <!-- Footer -->
   <footer role="contentinfo" style="margin-top:auto; background:#12343b; color:#fff; padding:1rem 1.25rem;">
     <div style="max-width:1100px; margin:0 auto; display:flex; flex-wrap:wrap; gap:.75rem; align-items:center; justify-content:space-between;">
-      <p style="margin:0; font-weight:600;">© <span id="year"></span> Lawns &amp; Laundry</p>
-      <nav aria-label="Footer" style="display:flex; gap:.5rem; flex-wrap:wrap;">
-        <a class="btn ghost" href="services.html" style="padding:.5rem .8rem;">Services</a>
-        <a class="btn ghost" href="signup.html" style="padding:.5rem .8rem;">Sign Up</a>
-        <a class="btn ghost" href="login.html" style="padding:.5rem .8rem;">Login</a>
-      </nav>
+      <p style="margin:0; font-weight:600;"> © 2025 Lawns &amp; Laundry Guild · All Rights Reserved </p>
+         
     </div>
-  </footer>
+  </footer>   
 
   <noscript>
     <p class="notice">For the best experience, please enable JavaScript.</p>
   </noscript>
 
   <script src="script.js" defer></script>
-  <script>
-    // small helper to keep footer current
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
-       
+     
