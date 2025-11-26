@@ -32,11 +32,12 @@ body {
 
 /* ===== Reusable UI ===== */
 .btn {
+  --btn-bg: var(--green);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background: var(--green);
+  background: var(--btn-bg);
   color: var(--text);
   border: none;
   padding: 0.8rem 1.2rem;
@@ -48,13 +49,18 @@ body {
   box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 1px 1px rgba(16, 24, 40, 0.04);
   transition: transform 0.08s ease, box-shadow 0.18s ease,
     background-color 0.18s ease, opacity 0.18s ease;
+  color: var(--text);
 }
 .btn:hover {
   transform: translateY(-1px);
+  background: var(--btn-bg);
   box-shadow: 0 6px 16px rgba(16, 24, 40, 0.14);
+  color: var(--text);
 }
 .btn:active {
   transform: translateY(0);
+  background: var(--btn-bg);
+  color: var(--text);
 }
 .btn:focus-visible {
   outline: 4px solid var(--focus);
@@ -65,10 +71,10 @@ body {
   cursor: not-allowed;
 }
 .btn.red {
-  background: var(--red);
+  --btn-bg: var(--red);
 }
 .btn-secondary {
-  background: #0ea5e9;
+  --btn-bg: #0ea5e9;
 }
 
 /* Skip link */
@@ -433,6 +439,44 @@ select:focus-visible {
   margin: 0 0.25rem;
 }
 
+.profile-menu-wrapper {
+  position: relative;
+}
+
+.profile-menu {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.4rem);
+  background: #fff;
+  border: 1px solid var(--ring);
+  border-radius: 0.75rem;
+  box-shadow: 0 12px 28px rgba(2, 8, 23, 0.16);
+  padding: 0.35rem 0;
+  min-width: 180px;
+  display: none;
+  z-index: 10;
+}
+
+.profile-menu.open {
+  display: block;
+}
+
+.profile-menu button {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background: transparent;
+  border: none;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+}
+
+.profile-menu button:hover,
+.profile-menu button:focus-visible {
+  background: #eef2ff;
+  outline: none;
+}
+
 .quest-toolbar {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -491,6 +535,7 @@ select:focus-visible {
 }
 
 .btn.ghost {
+  --btn-bg: transparent;
   background: transparent;
   color: var(--ink);
   border: 1px solid var(--ring);

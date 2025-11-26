@@ -29,7 +29,15 @@
       <button class="icon-chip" aria-label="Notifications">
         Bell<span class="badge">3</span>
       </button>
-      <button class="icon-chip" aria-label="Profile">You</button>
+      <div class="profile-menu-wrapper">
+        <button class="icon-chip" id="questProfileBtn" aria-label="Profile" style="background-color: aquamarine;">You</button>
+        <div class="profile-menu" id="questProfileMenu" role="menu" aria-label="Profile options">
+          <button id="questProfileAccount" role="menuitem">Your Account</button>
+          <button id="questProfileSettings" role="menuitem">Settings</button>
+          <button id="questProfileSignout" role="menuitem">Sign Out</button>
+        </div>
+      </div>
+     
     </section>
 
     <section class="quest-toolbar" aria-label="Location and search">
