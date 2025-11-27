@@ -22,6 +22,7 @@
     login: "login.html",
     signup: "signup.html",
     post: "postquest.html",
+    questview: "questview.html"
   };
 
   // An object to handle user authentication using the browser's localStorage.
@@ -36,12 +37,25 @@
     // Remove user data from localStorage.
     logout() {
       localStorage.removeItem(this.storageKey);
+      sessionStorage.removeItem(this.redirectKey);
     },
 
     // Check if a user is currently logged in.
     isLoggedIn() {
       return localStorage.getItem(this.storageKey) !== null;
-    }
+    },
+
+    // Redirect to quest view once per browser session when logged in.
+    redirectToQuestOnce() {
+      if (!this.isLoggedIn()) return;
+      const alreadyRedirected = sessionStorage.getItem(this.redirectKey) === "1";
+      const currentPage = location.pathname.split("/").pop();
+      if (alreadyRedirected || currentPage === "questview.html") return;
+      sessionStorage.setItem(this.redirectKey, "1");
+      location.href = "questview.html";
+    },
+
+    redirectKey: "ll_redirected_questview"
   };
 
   // --- 2. Main Setup ---
@@ -98,6 +112,9 @@
         }
       });
     }
+
+    // If logged in, optionally send them to the quest board once per session.
+    auth.redirectToQuestOnce();
   }
 
 
@@ -116,7 +133,63 @@
     if (signupForm) setupSignupForm(signupForm);
     if (questForm) setupQuestForm(questForm);
     if (passwordToggles.length > 0) setupPasswordToggles(passwordToggles);
+    
   }
+
+  /**
+   * Redirect to Quest Giver Profile from Quest View Page when you click "You" button.
+   */
+function setupQuestViewCTA() {
+  // Only run on the quest view page where the profile menu exists.
+  const questPage = document.querySelector(".quest-page");
+  if (!questPage) return;
+
+  const profileBtn = document.getElementById("questProfileBtn");
+  const profileMenu = document.getElementById("questProfileMenu");
+  const accountBtn = document.getElementById("questProfileAccount");
+  const settingsBtn = document.getElementById("questProfileSettings");
+  const signoutBtn = document.getElementById("questProfileSignout");
+
+  if (!profileBtn || !profileMenu) return;
+
+  const closeMenu = () => profileMenu.classList.remove("open");
+
+  profileBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    profileMenu.classList.toggle("open");
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!profileMenu.contains(e.target) && e.target !== profileBtn) {
+      closeMenu();
+    }
+  });
+
+  if (accountBtn) {
+    accountBtn.addEventListener("click", () => {
+      closeMenu();
+      window.location.href = "questgiver.html"; 
+    });
+  }
+
+  if (settingsBtn) {
+    settingsBtn.addEventListener("click", () => {
+      closeMenu();
+      window.location.href = "settings.html"; // create a settings.html page later
+    });
+  }
+
+  if (signoutBtn) {
+    signoutBtn.addEventListener("click", () => {
+      closeMenu();
+      auth.logout();
+      window.location.href = routes.home;
+    });
+  }
+}
+
+// call it after other page-specific setups
+setupQuestViewCTA();
 
   /**
    * LOGIN FORM: Handles the login process.
@@ -140,7 +213,7 @@
       // After login, redirect the user.
       // If a "return" URL is present (e.g., from a protected link), go there.
       const returnUrl = new URLSearchParams(location.search).get("return");
-      location.href = returnUrl || routes.home; // Otherwise, go to the homepage.
+      location.href = returnUrl || routes.questview; // Otherwise, go to the homepage.
     });
   }
 
@@ -257,5 +330,6 @@
     $$(".error, .success", formElement).forEach(el => el.remove());
   }
 
+  
   
 })();
