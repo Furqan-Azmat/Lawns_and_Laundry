@@ -22,6 +22,12 @@
   --secondary-btn: #222A73;
   --third-btn: #203D80;
   --blue-btn: #203D80;
+  --card: #ffffff;
+  --ring: #d1d5db;
+  --focus: #3b82f6;
+  --green: #10b981;
+  --muted: #6b7280;
+  --text: #ffffff;
 }
 
 html,
@@ -48,6 +54,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  background: var(--primary-btn);
   color: rgba(255, 255, 255, 0.8);
   border: none;
   padding: 1rem 1.2rem;
@@ -163,6 +170,10 @@ body {
   color: white;
   font-size: 120%;
 }
+
+#banner_top nav .btn:hover {
+  box-shadow: none;
+}
 /* 
 #services_link,
 #login_link {
@@ -189,7 +200,7 @@ main {
   box-shadow: 0 8px 26px rgba(2, 8, 23, 0.1);
   width: min(640px, 92vw);
   margin: 1.5rem auto;
-  padding: 1.25rem;
+  padding: 1.5rem;
 }
 .card h2 {
   margin: 0.25rem 0 1rem;
@@ -197,7 +208,7 @@ main {
 }
 .form-grid {
   display: grid;
-  gap: 0.9rem;
+  gap: 1.5rem;
 }
 .form-group {
   display: grid;
@@ -230,8 +241,12 @@ select:focus-visible {
   margin-top: 0.5rem;
 }
 .form-actions .btn, .form-actions .btn-secondary {
-  flex: 1;
+  flex: 0 0 auto;
   text-align: center;
+  font-size: 1rem;
+  padding: 0.7rem 1rem;
+  min-width: fit-content;
+  max-width: fit-content;
 }
 .helper {
   color: var(--muted);
@@ -241,6 +256,21 @@ select:focus-visible {
   color: #b91c1c;
   font-weight: 600;
   font-size: 0.95rem;
+}
+
+/* Form page buttons - smaller size */
+.page-wrap .btn {
+  font-size: 1rem;
+  padding: 0.8rem 1.2rem;
+}
+
+/* Password toggle button */
+.pwd-toggle {
+  flex-shrink: 0;
+  padding: 0.8rem 1rem;
+  white-space: nowrap;
+  min-width: auto;
+  background: var(--green);
 }
 
 /* Custom radio buttons */
@@ -264,6 +294,30 @@ select:focus-visible {
   border-color: var(--green) ;
 }
 .radio-group input {
+  display: none;
+}
+
+/* Custom checkbox buttons */
+.checkbox-group {
+  display: flex;
+  gap: 1.5rem;
+}
+.checkbox-group label{
+  min-width: 10rem;
+  min-height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--ring);
+  border-radius: 0.75rem;
+  cursor:pointer;
+}
+.checkbox-group input:checked + label{
+  background: var(--green);
+  color: white;
+  border-color: var(--green) ;
+}
+.checkbox-group input {
   display: none;
 }
 
@@ -533,117 +587,6 @@ select:focus-visible {
 }
 
 
-
-/* ===== Forms & Cards (used by login/signup/postquest) ===== */
-.page-wrap {
-  padding-top: 7.5rem;
-  padding-inline: 1rem;
-}
-.card {
-  background: var(--card);
-  border: 1px solid var(--ring);
-  border-radius: 1rem;
-  box-shadow: 0 8px 26px rgba(2, 8, 23, 0.1);
-  width: min(640px, 92vw);
-  margin: 1.5rem auto;
-  padding: 1.25rem;
-}
-.card h2 {
-  margin: 0.25rem 0 1rem;
-  font-size: 1.5rem;
-}
-.form-grid {
-  display: grid;
-  gap: 0.9rem;
-}
-.form-group {
-  display: grid;
-  gap: 0.35rem;
-}
-label {
-  font-weight: 600;
-}
-input,
-textarea,
-select {
-  width: 100%;
-  padding: 0.8rem 0.9rem;
-  border-radius: 0.75rem;
-  border: 1px solid var(--ring);
-  background: #fff;
-  font: inherit;
-}
-input:focus-visible,
-textarea:focus-visible,
-select:focus-visible {
-  outline: 3px solid var(--focus);
-  outline-offset: 2px;
-}
-.form-actions {
-  display: flex;
-  gap: 0.75rem;
-  align-items: center;
-  justify-content: flex-start;
-  margin-top: 0.5rem;
-}
-
-.form-actions .btn, .form-actions .btn-secondary {
-  flex: 1;
-  text-align: center;
-}
-
-.helper {
-  color: var(--muted);
-  font-size: 0.9rem;
-}
-.error {
-  color: #b91c1c;
-  font-weight: 600;
-  font-size: 0.95rem;
-}
-
-/* custom radio buttons in login/signup forms */
-.radio-group {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.radio-group label{
-  min-width: 10rem;
-  min-height: 3rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid var(--ring);
-  border-radius: 0.75rem;
-  cursor:pointer;
-}
-
-.radio-group input:checked + label{
-  background: var(--green);
-  color: white;
-  border-color: var(--green) ;
-}
-.radio-group input {
-  display: none;
-}
-
-/* Back button block */
-.back-button {
-  text-align: center;
-  margin: 1rem 0 2rem;
-}
-
-/* Notices */
-.notice {
-  background: #fff1;
-  color: #111;
-  border-left: 4px solid var(--focus);
-  padding: 0.75rem 1rem;
-  width: min(640px, 92vw);
-  margin: 1rem auto;
-  border-radius: 0.5rem;
-}
 
 /* Small utility */
 .hidden {
