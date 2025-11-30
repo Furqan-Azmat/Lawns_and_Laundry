@@ -676,6 +676,9 @@ select:focus-visible {
   text-align: center;
   margin: 2rem;
 }
+.service-intro-text h1 {
+  color: white;
+}
 
 .category-cards {
   display: grid;
