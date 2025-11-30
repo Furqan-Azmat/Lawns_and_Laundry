@@ -1,61 +1,69 @@
+/* =============================================
+   GLOBAL STYLES (Variables, Resets, Reusable UI)
+   ============================================= */
+
 /* ===== CSS Variables & Resets ===== */
 * {
   box-sizing: border-box;
 }
-:root {
-  --green: #16a34a;
-  --red: #dc2626;
-  --text: #ffffff;
-  --focus: #2563eb;
-  --bg: #f6f7f9;
-  --ink: #0f172a;
-  --muted: #64748b;
-  --card: #ffffff;
-  --ring: #cbd5e1;
-  --accent: #ff80c0;
+
+@font-face {
+  font-family: 'determination';
+  src: url(determination.ttf) format('truetype');
 }
+
+:root {
+  --heading: #524D99;
+  --main: #776BB3;
+  --footer: #524D99;
+  --dark-text: #000000;
+  --light-text: #ffffff;
+  --primary-btn: #524D99;
+  --secondary-btn: #222A73;
+  --third-btn: #203D80;
+  --blue-btn: #203D80;
+}
+
 html,
 body {
   height: 100%;
+  overflow-x: hidden;             /* Prevent horizontal scrollbar */
 }
+
 body {
   margin: 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  background: var(--bg);
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Inter, Helvetica,
-    Arial, sans-serif;
-  color: var(--ink);
-  background-color: #c89666;
+  font-family: 'determination', sans-serif;
+  background: var(--main);
 }
 
-/* ===== Reusable UI ===== */
+/* ===== Reusable UI Components ===== */
+
+/* Buttons----------------------------------------------------------------------------------------------------------------------------------------------*/
+
 .btn {
-  --btn-bg: var(--green);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background: var(--btn-bg);
-  color: var(--text);
+  color: rgba(255, 255, 255, 0.8);
   border: none;
-  padding: 0.8rem 1.2rem;
+  padding: 1rem 1.2rem;
   border-radius: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.02em;
   cursor: pointer;
   text-decoration: none;
-  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.04), 0 1px 1px rgba(16, 24, 40, 0.04);
   transition: transform 0.08s ease, box-shadow 0.18s ease,
     background-color 0.18s ease, opacity 0.18s ease;
-  color: var(--text);
+  font-size: 150%;
 }
 .btn:hover {
   transform: translateY(-1px);
-  background: var(--btn-bg);
   box-shadow: 0 6px 16px rgba(16, 24, 40, 0.14);
-  color: var(--text);
+  color: var(--light-text);
 }
 .btn:active {
   transform: translateY(0);
@@ -70,12 +78,39 @@ body {
   opacity: 0.6;
   cursor: not-allowed;
 }
-.btn.red {
-  --btn-bg: var(--red);
+
+.btn-primary {
+  background: var(--primary-btn);
+  --btn-bg: var(--primary-btn);
 }
+
 .btn-secondary {
-  --btn-bg: #0ea5e9;
+  background: var(--secondary-btn);
+  --btn-bg: var(--secondary-btn);
 }
+
+.btn-blue {
+  background: var(--blue-btn);
+  --btn-bg: var(--blue-btn);
+}
+
+.btn.ghost {
+  --btn-bg: transparent;
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--ring);
+  box-shadow: none;
+}
+.btn.ghost:hover {
+  transform: none;
+  background: #e2e8f0;
+}
+.btn.wide {
+  width: 100%;
+  justify-content: center;
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 /* Skip link */
 .skip-link {
@@ -97,119 +132,407 @@ body {
   border-radius: 0.5rem;
 }
 
-/* ===== Header / Banner (IDs preserved) ===== */
+/* ===== Header / Banner ===== */
 #banner_top {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   height: 100px;
-  background: #12343b;
+  background: var(--heading);
   z-index: 1000;
-  border-bottom: 1px solid black;
+  /* border-bottom: 1px solid black; */
   display: grid;
-  grid-template-columns: 280px 1fr 280px;
+  grid-template-columns: 280px 1fr auto;
   align-items: center;
   padding: 0 1rem;
 }
+
 #img_logo {
   width: 260px;
   max-height: 80px;
   height: auto;
   display: block;
 }
-#website_name {
-  margin: 0;
-  text-align: center;
-  font-size: clamp(24px, 2.4vw, 32px);
-  font-weight: 800;
-  color: white;
-}
+
 #banner_top nav {
+  grid-column: 3;
   display: flex;
   justify-content: flex-end;
   gap: 0.75rem;
-  padding-right: 0.5rem;
+  color: white;
+  font-size: 120%;
 }
-
-/* Legacy absolute positions retained for anchors so layout remains familiar */
-#services_link {
-  position: relative;
-}
+/* 
+#services_link,
 #login_link {
   position: relative;
-}
-#signup_link {
-  position: relative;
-}
+  white-space: nowrap;
+  overflow: visible;
+} */
 
-/* ===== Hero speech bubble (IDs preserved) ===== */
+/* ===== Main Content ===== */
 main {
   padding-top: 120px;
   flex: 0;
 }
-.speech-bubble {
-  position: relative;
-  background: #12343b;
-  border-radius: 0.9rem;
-  width: min(900px, 92vw);
-  height: auto;
-  margin: 2rem auto;
-  padding: 1rem 1rem 1.25rem;
-  color: #fff;
-  box-shadow: 0 14px 38px rgba(0, 0, 0, 0.12);
+
+/* ===== Forms & Cards (Shared across pages) ===== */
+.page-wrap {
+  padding-top: 7.5rem;
+  padding-inline: 1rem;
 }
-.speech-bubble:after {
-  content: "";
-  position: absolute;
-  right: 431px;
-  bottom: -50px;
-  transform: translateY(-50%);
-  border: 27px solid transparent;
-  border-left-color: #12343b;
-  transform: rotate(90deg);
+.card {
+  background: var(--card);
+  border: 1px solid var(--ring);
+  border-radius: 1rem;
+  box-shadow: 0 8px 26px rgba(2, 8, 23, 0.1);
+  width: min(640px, 92vw);
+  margin: 1.5rem auto;
+  padding: 1.25rem;
 }
-.speech-bubble h1 {
-  margin: 0.25rem 0 0.25rem;
-  font-size: clamp(28px, 3.2vw, 36px);
+.card h2 {
+  margin: 0.25rem 0 1rem;
+  font-size: 1.5rem;
+}
+.form-grid {
+  display: grid;
+  gap: 0.9rem;
+}
+.form-group {
+  display: grid;
+  gap: 0.35rem;
+}
+label {
+  font-weight: 600;
+}
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 0.8rem 0.9rem;
+  border-radius: 0.75rem;
+  border: 1px solid var(--ring);
+  background: #fff;
+  font: inherit;
+}
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+.form-actions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 0.5rem;
+}
+.form-actions .btn, .form-actions .btn-secondary {
+  flex: 1;
   text-align: center;
 }
-.speech-bubble p {
-  margin: 0.25rem 0;
-  font-size: clamp(16px, 2vw, 20px);
+.helper {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+.error {
+  color: #b91c1c;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* Custom radio buttons */
+.radio-group {
+  display: flex;
+  gap: 1.5rem;
+}
+.radio-group label{
+  min-width: 10rem;
+  min-height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--ring);
+  border-radius: 0.75rem;
+  cursor:pointer;
+}
+.radio-group input:checked + label{
+  background: var(--green);
+  color: white;
+  border-color: var(--green) ;
+}
+.radio-group input {
+  display: none;
+}
+
+/* Back button */
+.back-button {
+  text-align: center;
+  margin: 1rem 0 2rem;
+}
+
+/* Notices */
+.notice {
+  background: #fff1;
+  color: #111;
+  border-left: 4px solid var(--focus);
+  padding: 0.75rem 1rem;
+  width: min(640px, 92vw);
+  margin: 1rem auto;
+  border-radius: 0.5rem;
+}
+
+/* Utility classes */
+.hidden {
+  display: none !important;
+}
+
+/* Mobile tweaks */
+@media (max-width: 520px) {
+  #banner_top {
+    grid-template-columns: 1fr auto;
+    height: auto;
+    padding: 0.5rem 0.75rem;
+    row-gap: 0.25rem;
+  }
+  #website_name {
+    grid-column: 1/-1;
+    font-size: 22px;
+  }
+  #img_logo {
+    width: 180px;
+  }
+}
+
+/* Footer --------------------------------------------------------------------------------------------------------------------------------------------*/
+#footer {
+  background: var(--footer);
+  color: var(--light-text);
+  padding: 1rem 0 1rem 0;         /* Adjust: top right bottom left - no side padding */
+  margin-top: 2rem;  
+  margin-bottom: 0;               /* Adjust: spacing above footer */
+  margin-left: 0;                 /* Remove any inherited margins */
+  margin-right: 0;
+  width: 100vw;                   /* Use viewport width instead */
+  box-sizing: border-box;
+  position: relative;
+  left: 0;
+  right: 0;
+}
+
+.footer-content {
+  max-width: 100%;                /* Full width */
+  margin: 0;                      /* No centering margin */
+  padding-left: 2rem;             /* Left padding */
+  padding-right: 2rem;          /* Minimal right padding */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;                    /* Smaller gap between columns */
+  box-sizing: border-box;
+}
+
+.footer-content > div {
+  display: flex;
+  flex-direction: column;
+  flex: 1;                        /* Allow columns to grow equally */
+  min-width: 150px;               /* Minimum width for each column */
+}
+
+#support {
+  padding-right: 0rem;
+  margin-right: 0;
+  flex-grow: 0;                   /* Don't let support grow */
+}
+
+.footer-content h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 1rem;
+  color: var(--dark-text);
+}
+
+.footer-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.footer-content li {
+  margin: 0;
+}
+
+.footer-content a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.2s ease;
+}
+
+.footer-content a:hover {
+  color: var(--light-text);
+  text-decoration: underline;
+}
+
+.footer-content > p {
+  width: 100%;
+  text-align: left;
+  margin: 0.25rem 0 0;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+
+/* Footer responsive */
+@media (max-width: 920px) {
+  .footer-content {
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  .footer-content > div {
+    flex: 0 0 calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 520px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------------------------- */
+
+/* =============================================
+   INDEX.HTML (Landing Page)
+   ============================================= */
+
+/* Landing layout */
+.landing-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+  max-width: 1400px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.landing-left {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow: visible;
+}
+
+.landing-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing-right figure {
+  margin: 0;
+}
+
+#guildReceptionistImg {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 1rem;
+}
+
+/* Hero speech bubble */
+.speech-bubble {
+  position: relative;
+  background: white;
+  border: 1px solid white;
+  border-radius: 5rem; /* Change this value to adjust corner roundness (e.g., 0.5rem for sharper, 1.5rem for rounder) */
+  width: 100%; /* Takes full width of parent container */
+  height: auto;
+  padding: 1.5rem 1.5rem 1.75rem; /* Adjust padding to change internal spacing (top right bottom left) */
+  color: black;
+}
+
+/* Speech bubble tail (triangle pointer) */
+.speech-bubble::after {
+  content: "";
+  position: absolute;
+  
+  /* POSITIONING: Adjust where the tail appears on the bubble */
+  top: 75px;       /* Distance from top of bubble - increase to move tail down, decrease to move up */
+  right: -95px;    /* Distance from right edge - more negative = further right, less negative = closer to bubble */
+  
+  /* SIZE: Change the tail size by adjusting border values */
+  width: 0;
+  height: 0;
+  border: 30px solid transparent;           /* Controls height of tail - increase for taller tail */
+  border-left-color: white;                 /* Must match bubble background color */
+  border-left-width: 65px;                  /* Controls width/length of tail - increase for longer tail */
+  
+  /* TIP: To point tail in different directions:
+     - Right (current): use border-left-color
+     - Left: use border-right-color and adjust left position
+     - Down: use border-top-color and adjust bottom position
+     - Up: use border-bottom-color and adjust top position */
+}
+
+.speech-bubble h1 {
+  margin: 0.25rem 0 0.75rem;
+  font-size: clamp(25px, 2.5vw, 32px);
   text-align: center;
 }
 
-/* CTA Row preserving original IDs */
-.cta-row {
+.speech-bubble p {
+  margin: 0.5rem 0;
+  font-size: clamp(20px, 1.5vw, 18px);
+  text-align: center;
+}
+
+/* Landing buttons */
+.landing-buttons {
   display: flex;
   gap: 1rem;
   justify-content: center;
   align-items: center;
-  margin: 2rem;
-  margin-bottom: 2rem;
-  margin-top: 2rem;
 }
 
+/* Responsive layout */
+@media (max-width: 920px) {
+  .landing-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .landing-right {
+    order: -1;
+  }
+}
+
+/* Legacy styles */
 #postAQuest {
   position: relative;
 }
-#signup_link {
-  position: relative;
-}
 
-/* Receptionist image (IDs preserved) */
 #receptionist {
   display: flex;
   justify-content: center;
   margin: 1rem auto 3rem;
 }
+
 #img_receptionist {
   width: min(600px, 92vw);
   height: auto;
   border-radius: 1rem;
   box-shadow: 0 10px 28px rgba(2, 8, 23, 0.12);
 }
+
+
 
 /* ===== Forms & Cards (used by login/signup/postquest) ===== */
 .page-wrap {
@@ -344,7 +667,16 @@ select:focus-visible {
   }
 }
 
-/* Service category cards */
+
+/* =============================================
+   SERVICES.HTML
+   ============================================= */
+
+.service-intro-text {
+  text-align: center;
+  margin: 2rem;
+}
+
 .category-cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(250px, 1fr));
@@ -361,7 +693,6 @@ select:focus-visible {
   transition: transform 0.2s, box-shadow 0.2s;
   text-align: center;
 }
-
 
 .category-card img {
   width: 100%;
@@ -383,12 +714,10 @@ select:focus-visible {
 }
 
 
-.service-intro-text {
-  text-align: center;
-  margin: 2rem;
-}
+/* =============================================
+   QUESTVIEW.HTML (Quest Board)
+   ============================================= */
 
-/* ===== Quest View (Quest Board) ===== */
 .quest-page {
   padding: 140px 1.5rem 3rem;
   max-width: 1200px;
@@ -743,7 +1072,10 @@ select:focus-visible {
   }
 }
 
-/* ===== Questgiver page ===== */
+
+/* =============================================
+   QUESTGIVER.HTML
+   ============================================= */
 
 .quest-hub {
   padding: 1rem;
@@ -855,8 +1187,12 @@ select:focus-visible {
   border-radius: 6px 0 0 6px;
 }
 
-/* ===== triple navbar ===== */
-/*shared segment */
+
+/* =============================================
+   SIDEBAR NAVIGATION (Shared across multiple pages)
+   ============================================= */
+
+/* Shared segment */
 .sidebar {
   position: fixed;
   top: 100px; 
@@ -1026,6 +1362,11 @@ background:  #0f2d33;
   border-radius: 50%;
 }
 
+
+/* =============================================
+   ADVENTURERPROFILE.HTML
+   ============================================= */
+
 .profile-wrapper {
     display: flex;
     justify-content: center;
@@ -1115,6 +1456,11 @@ background:  #0f2d33;
     overflow: hidden;
     white-space: nowrap;
 }
+
+
+/* =============================================
+   MESSAGES.HTML
+   ============================================= */
 
 .messages-wrapper {
     margin-top: 120px; 
