@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+ccccc
+<body>
+  <header id="banner_top">
+    <div id="logo"><img id="img_logo" src="images/LawnsLogoPlaceholder.png" alt="Logo" /></div>
+    <p id="website_name">Lawns &amp; Laundry</p>
+    <nav><a href="index.html" class="btn" data-nav>Home</a></nav>
+  </header>
+
+  <main class="page-wrap">
+    <section class="card">
+      <h2>Create your account</h2>
+      <form id="signupForm" action="/submit" method="POST" class="form-grid" novalidate>
+        <div class="form-group">
+          <label for="fullname">Full Name</label>
+          <input id="fullname" name="fullname" type="text" autocomplete="name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <div style="display:flex; gap:.5rem; align-items:center;">
+            <input id="password" name="password" type="password" autocomplete="new-password" required minlength="6" />
+            <button type="button" class="btn pwd-toggle" data-for="password" aria-pressed="false">Show</button>
+          </div>
+          <p class="helper">Minimum 6 characters.</p>
+        </div>
+
+        <div class="form-group">
+          <label for="confirm-password">Confirm Password</label>
+          <div style="display:flex; gap:.5rem; align-items:center;">
+            <input id="confirm-password" name="confirm-password" type="password" autocomplete="new-password" required />
+            <button type="button" class="btn pwd-toggle" data-for="confirm-password" aria-pressed="false">Show</button>
+          </div>
+        </div>
+
+      <div class="form-group">
+          <label for="user-type">I want to sign up as a...:</label>
+
+        <div id="user-type" class="radio-group" role="radiogroup" aria-labelledby="user-type-label" >
+
+          <input type="radio" name="user-type" id="Adventurer">
+          <label for="Adventurer">Adventurer</label>
+          
+          <input type="radio" name="user-type" id="QuestGiver">
+          <label for="QuestGiver">Quest Giver</label>
+
+        </div>
+
+        </div>
+
+        <div class="form-group">
+          <label for="user-age">Age:</label>
+          <select id="user-age" name="user-age" required>
+            <option value="" disabled selected>How old are you?</option>
+            <option value="underage">17 or under</option>
+            <option value="adult">18 or older</option>
+          </select>
+        </div>
+
+
+        <div class="form-actions">
+          <input type="submit" value="Sign Up" class="btn" />
+          <a class="btn btn-secondary" href="login.html">Back to Login</a>
+        </div>
+      </form>
+    </section>
+
+    <div class="back-button">
+      <a href="index.html" class="btn">Back to Main Page</a>
+    </div>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
