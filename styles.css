@@ -1025,3 +1025,144 @@ background:  #0f2d33;
   height: 110px;
   border-radius: 50%;
 }
+
+.profile-wrapper {
+    display: flex;
+    justify-content: center;
+    padding-top: 150px; 
+}
+
+.profile-card {
+    width: 400px;
+    background: #f7f7f7;
+    padding: 30px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.profile-name {
+    font-size: 28px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.profile-role {
+    font-size: 18px;
+    margin-top: 5px;
+    color: #666;
+}
+
+.exp-section {
+    margin-top: 30px;
+}
+
+.exp-label {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.exp-bar {
+    width: 100%;
+    height: 20px;
+    background: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.exp-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #4ba3ff, #0066ff);
+    border-radius: 10px 0 0 10px;
+}
+
+.exp-text {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #555;
+}
+
+.stars-rating {
+    position: relative;
+    width: fit-content;
+    margin: 25px auto 0 auto;
+    font-size: 32px;
+    line-height: 1;
+}
+
+.stars-rating::before {
+    content: "★★★★★";
+    color: #ccc;
+}
+
+.stars-rating::after {
+    content: "★★★★★";
+    color: gold;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%; 
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.messages-wrapper {
+    margin-top: 120px; 
+    text-align: center;
+}
+
+.messages-title {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.messages-list {
+    width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.message-item {
+    background: #f7f7f7;
+    padding: 18px 20px;
+    border-radius: 12px;
+    text-align: left;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.message-item:hover {
+    background: #ececec;
+}
+
+.message-sender {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.message-preview {
+    font-size: 15px;
+    color: #555;
+    margin-top: 4px;
+}
+
+.message-date {
+    font-size: 12px;
+    color: #888;
+    margin-top: 8px;
+    text-align: right;
+}
+
