@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin Dashboard | Lawns & Laundry</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header id="banner_top" role="banner" aria-label="Top navigation">
+        <a class="skip-link" href="#main">Skip to content</a>
+        <div id="logo" aria-label="Site logo">
+            <img id="img_logo" src="images/LawnsLogoPlaceholder.png" alt="Lawns & Laundry logo" />
+        </div>
+        <p id="website_name" aria-label="Website name">Lawns & Laundry</p>
+        <nav aria-label="Primary">
+            <a href="index.html" class="btn" data-nav>Home</a>
+            <a href="services.html" class="btn" data-nav>Services</a>
+        </nav>
+    </header>
+
+    <main id="main" class="admin-layout" tabindex="-1">
+        <section class="admin-page" aria-label="Admin dashboard">
+            <header class="admin-header">
+                <div>
+                    <p class="eyebrow">Dashboard</p>
+                    <h1>Admin Overview</h1>
+                </div>
+                <div class="admin-actions">
+                    <button class="btn btn-secondary">Invite User</button>
+                    <button class="btn btn-primary">Add Quest</button>
+                </div>
+            </header>
+
+            <div class="card stat-band">
+                <div class="stat-grid">
+                    <div class="stat-item">
+                        <p class="eyebrow">Active Quests</p>
+                        <p class="stat-value">24</p>
+                        <p class="stat-meta">+6 vs last week</p>
+                    </div>
+                    <div class="stat-item">
+                        <p class="eyebrow">Open Applications</p>
+                        <p class="stat-value">13</p>
+                        <p class="stat-meta">2 require review</p>
+                    </div>
+                    <div class="stat-item">
+                        <p class="eyebrow">Average Rating</p>
+                        <p class="stat-value">4.6</p>
+                        <p class="stat-meta">Based on 128 reviews</p>
+                    </div>
+                    <div class="stat-item">
+                        <p class="eyebrow">Revenue</p>
+                        <p class="stat-value">$9.2k</p>
+                        <p class="stat-meta">Month-to-date</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="admin-columns">
+                <div class="admin-main">
+                    <div class="card admin-panel">
+                        <header class="panel-header">
+                            <h2>Recent Quests</h2>
+                            <a class="side-link" href="questgiverrecent.html">View all</a>
+                        </header>
+                        <div class="panel-list">
+                            <div class="panel-row">
+                                <div>
+                                    <p class="panel-title">Mow my lawn</p>
+                                    <p class="panel-sub">Today | 2 hrs | $45</p>
+                                </div>
+                                <span class="pill">Active</span>
+                            </div>
+                            <div class="panel-row">
+                                <div>
+                                    <p class="panel-title">Carry my groceries</p>
+                                    <p class="panel-sub">Today | 30 mins | $10</p>
+                                </div>
+                                <span class="pill">Active</span>
+                            </div>
+                            <div class="panel-row">
+                                <div>
+                                    <p class="panel-title">Shovel snow off my roof</p>
+                                    <p class="panel-sub">Today | 1 hour | $90</p>
+                                </div>
+                                <span class="pill">Pending</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card admin-panel">
+                        <header class="panel-header">
+                            <h2>Team Activity</h2>
+                            <span class="pill">Live</span>
+                        </header>
+                        <ul class="activity-list">
+                            <li><strong>Sage</strong> approved a quest application <span class="time">2m ago</span></li>
+                            <li><strong>Rei</strong> refunded $15 to order #233 <span class="time">9m ago</span></li>
+                            <li><strong>Mina</strong> posted a new quest "Trim hedges" <span class="time">18m ago</span></li>
+                            <li><strong>Alex</strong> archived "Winter salting" <span class="time">42m ago</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <aside class="admin-charts">
+                    <div class="card chart-card">
+                        <header class="panel-header">
+                            <h2>Quest Categories</h2>
+                            <span class="pill">This week</span>
+                        </header>
+                        <div class="bar-chart">
+                            <div class="bar-row">
+                                <span class="bar-label">Lawn</span>
+                                <div class="bar-track"><span class="bar-fill" style="width: 75%;"></span></div>
+                                <span class="bar-value">75%</span>
+                            </div>
+                            <div class="bar-row">
+                                <span class="bar-label">Delivery</span>
+                                <div class="bar-track"><span class="bar-fill" style="width: 52%;"></span></div>
+                                <span class="bar-value">52%</span>
+                            </div>
+                            <div class="bar-row">
+                                <span class="bar-label">Snow</span>
+                                <div class="bar-track"><span class="bar-fill" style="width: 34%;"></span></div>
+                                <span class="bar-value">34%</span>
+                            </div>
+                            <div class="bar-row">
+                                <span class="bar-label">Other</span>
+                                <div class="bar-track"><span class="bar-fill" style="width: 18%;"></span></div>
+                                <span class="bar-value">18%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card chart-card">
+                        <header class="panel-header">
+                            <h2>Weekly Completions</h2>
+                            <span class="pill">Last 6 wks</span>
+                        </header>
+                        <div class="spark-bars">
+                            <div class="spark-bar" style="height: 42%;"></div>
+                            <div class="spark-bar" style="height: 55%;"></div>
+                            <div class="spark-bar" style="height: 68%;"></div>
+                            <div class="spark-bar" style="height: 62%;"></div>
+                            <div class="spark-bar" style="height: 78%;"></div>
+                            <div class="spark-bar" style="height: 88%;"></div>
+                        </div>
+                        <p class="stat-meta">88% completion last week (+10%)</p>
+                    </div>
+                </aside>
+            </div>
+
+            <div class="admin-wide-grid">
+                <div class="card admin-table" aria-label="Users table">
+                    <header class="panel-header">
+                        <h2>Top Adventurers</h2>
+                        <span class="pill">This month</span>
+                    </header>
+                    <div class="table-head">
+                        <span>Name</span><span>Quests</span><span>Rating</span><span>Status</span>
+                    </div>
+                    <div class="table-row">
+                        <span>Jordan</span><span>18</span><span>4.9</span><span class="pill">Active</span>
+                    </div>
+                    <div class="table-row">
+                        <span>Sam</span><span>15</span><span>4.7</span><span class="pill">Active</span>
+                    </div>
+                    <div class="table-row">
+                        <span>Taylor</span><span>12</span><span>4.5</span><span class="pill">On hold</span>
+                    </div>
+                </div>
+
+                <div class="card admin-table" aria-label="System health">
+                    <header class="panel-header">
+                        <h2>System Health</h2>
+                        <span class="pill">OK</span>
+                    </header>
+                    <div class="health-rows">
+                        <div class="health-row"><span>API uptime</span><span class="health-value good">99.9%</span></div>
+                        <div class="health-row"><span>Response time</span><span class="health-value warn">320ms</span></div>
+                        <div class="health-row"><span>Error rate</span><span class="health-value good">0.2%</span></div>
+                        <div class="health-row"><span>Incidents</span><span class="health-value good">0 open</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+       <!-- Footer -->
+  <footer id="footer" role="contentinfo" aria-label="Footer">
+    <div class="footer-content">
+      <div id="product"> 
+        <h3>Product</h3>
+        <ul>
+          <li><a href="#">iOS App</a></li>
+          <li><a href="#">Android App</a></li>
+          <li><a href="#">How It Works</a></li>
+        </ul>
+      </div>
+
+      <div id="company">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Blogs</a></li>
+        </ul>
+      </div>
+
+      <div id="community">
+        <h3>Community</h3>
+        <ul>
+          <li><a href="#">Community Guidelines</a></li>
+          <li><a href="#">Contributing to L&amp;L</a></li>
+          <li><a href="#">Translate L&amp;L</a></li>
+        </ul>
+      </div>
+
+      <div id="support">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Report a Bug</a></li>
+          <li><a href="#">Request a Feature</a></li>
+        </ul>
+      </div>
+
+      <p> © 2025 Lawns &amp; Laundry · All Rights Reserved </p>
+         
+    </div>
+  </footer>
+</body>
+</html>
