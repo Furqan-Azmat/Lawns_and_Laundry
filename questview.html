@@ -7,61 +7,82 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!-- ===== HEADER NAVIGATION ===== -->
   <header id="banner_top" role="banner" aria-label="Top navigation">
+    <!-- Skip Link for Accessibility -->
     <a class="skip-link" href="#main">Skip to content</a>
+    
+    <!-- Logo -->
     <div id="logo" aria-label="Site logo">
-      <img id="img_logo" src="images/LawnsLogoPlaceholder.png" alt="Lawns &amp; Laundry logo" />
+      <img id="img_logo" src="images/icons/lawns&Laundry-logo.png" alt="Lawns &amp; Laundry logo" />
     </div>
-    <p id="website_name" aria-label="Website name">Lawns &amp; Laundry</p>
-    <nav aria-label="Primary">
-      <a href="index.html" class="btn" data-nav>Home</a>
-      <a href="services.html" class="btn" data-nav>Services</a>
-      <a href="login.html" id="login_link" class="btn" data-nav>Login</a>
-    </nav>
-  </header>
-
-  <main id="main" class="quest-page" tabindex="-1">
-    <section class="quest-icons" aria-label="Quick actions">
-      <button class="icon-chip" aria-label="Favorites">Fav</button>
-      <button class="icon-chip" aria-label="Quest grid">Board</button>
-      <button class="icon-chip" aria-label="Community">Team</button>
-      <div class="icon-spacer" aria-hidden="true"></div>
-      <button class="icon-chip" aria-label="Notifications">
-        Bell<span class="badge">3</span>
+    
+    <!-- Main Navigation Buttons (Centered) -->
+    <nav class="quest-nav" aria-label="Primary">
+      <button class="icon-chip square book-icon" aria-label="Profile Hub">
+        <img src="images/icons/book icon.png" alt="Profile Hub" />
       </button>
+      <button class="icon-chip square active" aria-label="Quest Board" style="background-color: #B8B5E5; border-color: #B8B5E5;">
+        <img src="images/icons/sword icon.png" alt="Quest Board" />
+      </button>
+      <button class="icon-chip square" aria-label="Guild">
+        <img src="images/icons/guild icon.png" alt="Guild" />
+      </button>
+    </nav>
+    
+    <!-- Right Side Navigation -->
+    <div class="nav-right">
+      <!-- Notifications Bell -->
+      <a href="messages.html" class="icon-chip" aria-label="Notifications">
+        <img src="images/icons/bell icon.png" alt="Notifications">
+        <span class="badge">3</span>
+      </a>
+      <!-- Profile Menu -->
       <div class="profile-menu-wrapper">
-        <button class="icon-chip" id="questProfileBtn" aria-label="Profile" style="background-color: aquamarine;">You</button>
+        <button class="icon-chip" id="questProfileBtn" aria-label="Profile">
+          <img src="images/icons/profile icon.png" alt="Profile">
+        </button>
         <div class="profile-menu" id="questProfileMenu" role="menu" aria-label="Profile options">
           <button id="questProfileAccount" role="menuitem">Your Account</button>
           <button id="questProfileSettings" role="menuitem">Settings</button>
           <button id="questProfileSignout" role="menuitem">Sign Out</button>
         </div>
       </div>
-     
-    </section>
+    </div>
+  </header>
 
+  <!-- ===== MAIN CONTENT ===== -->
+  <main id="main" class="quest-page" tabindex="-1">
+
+    <!-- Location & Search Toolbar -->
     <section class="quest-toolbar" aria-label="Location and search">
+      <!-- Current Location Display -->
       <div class="location-chip">
-        <span class="icon">Update icon later</span>
+        <img src="images/icons/location icon.png" alt="" class="icon" />
         <div>
-          <p class="eyebrow">Current location</p>
-          <p class="title">Toronto, ON</p>
+          <p class="eyebrow">Current location: <span class="title">Toronto, ON</span></p>
         </div>
       </div>
+      
+      <!-- Search Bar & Filter Button -->
       <div class="search-group">
         <label class="input-icon" aria-label="Search quests">
-          <span class="icon">Search</span>
-          <input type="search" placeholder="Search quests" />
+          <img src="images/icons/search icon.png" alt="" class="icon" />
+          <input type="search" placeholder="Search" />
         </label>
-        <button class="btn" aria-label="Filter quests" style="background-color: blueviolet;">Filters</button>
+        <button class="btn filter-btn" aria-label="Filter quests" style="background-color: white; width: 80px; height: 80px; max-width: 80px; max-height: 80px; padding: 0; overflow: visible; border: 1px solid var(--ring); border-radius: 0.9rem;">
+          <img src="images/icons/filter icon.png" alt="" style="width: 100px; height: 100px;" />
+        </button>
       </div>
     </section>
 
+    <!-- Quest Board Section -->
     <section class="quest-board" aria-label="Quest board">
       <header class="board-header">
         <h1>Quest Board</h1>
       </header>
       <div class="board-content">
+        <!-- Quest List (Left Column) -->
         <div class="quest-list" role="list">
           <button class="quest-pill active" role="listitem">
             <span class="quest-title">Mow my lawn</span>
@@ -91,7 +112,11 @@
             </span>
           </button>
         </div>
+        
+        <!-- Vertical Divider -->
         <div class="quest-divider" aria-hidden="true"></div>
+        
+        <!-- Quest Detail Panel (Right Column) -->
         <div class="quest-detail" aria-live="polite">
           <header class="detail-header">
             <div>
@@ -126,10 +151,55 @@
       </div>
     </section>
 
+    <!-- Post Quest Call-to-Action -->
     <div class="post-cta">
       <a class="btn wide" href="postquest.html">Post a new Quest</a>
     </div>
   </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer" role="contentinfo" aria-label="Footer">
+    <div class="footer-content">
+      <div id="product"> 
+        <h3>Product</h3>
+        <ul>
+          <li><a href="#">iOS App</a></li>
+          <li><a href="#">Android App</a></li>
+          <li><a href="#">How It Works</a></li>
+        </ul>
+      </div>
+
+      <div id="company">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Blogs</a></li>
+        </ul>
+      </div>
+
+      <div id="community">
+        <h3>Community</h3>
+        <ul>
+          <li><a href="#">Community Guidelines</a></li>
+          <li><a href="#">Contributing to L&amp;L</a></li>
+          <li><a href="#">Translate L&amp;L</a></li>
+        </ul>
+      </div>
+
+      <div id="support">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Report a Bug</a></li>
+          <li><a href="#">Request a Feature</a></li>
+        </ul>
+      </div>
+
+      <p> © 2025 Lawns &amp; Laundry · All Rights Reserved </p>
+         
+    </div>
+  </footer>
 
   <script src="script.js" defer></script>
 </body>
