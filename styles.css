@@ -1506,55 +1506,198 @@ background:  #433E8C;
 /* =============================================
    MESSAGES.HTML
    ============================================= */
-
-.messages-wrapper {
-    margin-top: 120px; 
-    text-align: center;
+.messages-page {
+  padding: 140px 1rem 2.5rem;
+  max-width: 1050px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-.messages-title {
-    font-size: 32px;
-    margin-bottom: 20px;
+.messages-board {
+  background: #f8f8f8;
+  border: 2px solid #2F2C62;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
 }
 
-.messages-list {
-    width: 600px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+.messages-board-header {
+  background: #dedede;
+  padding: 1.1rem;
+  border-bottom: 2px solid #2F2C62;
+  text-align: center;
 }
 
-.message-item {
-    background: #f7f7f7;
-    padding: 18px 20px;
-    border-radius: 12px;
-    text-align: left;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    cursor: pointer;
+.messages-board-header h1 {
+  margin: 0;
+  font-size: 1.9rem;
+  letter-spacing: 0.05em;
 }
 
-.message-item:hover {
-    background: #ececec;
+.messages-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  min-height: 460px;
+  background: #ffffff;
 }
 
-.message-sender {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
+.thread-list {
+  display: flex;
+  flex-direction: column;
+  border-right: 2px solid #2F2C62;
+  background: #f1f1f1;
 }
 
-.message-preview {
-    font-size: 15px;
-    color: #555;
-    margin-top: 4px;
+.thread-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.1rem 1.2rem;
+  background: #d8d8d8;
+  border: none;
+  border-bottom: 2px solid #2F2C62;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  color: #000;
 }
 
-.message-date {
-    font-size: 12px;
-    color: #888;
-    margin-top: 8px;
-    text-align: right;
+.thread-item:last-child {
+  border-bottom: none;
+}
+
+.thread-item.active {
+  background: var(--active);
+}
+
+.thread-name {
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.avatar-placeholder {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #9b9b9b;
+  flex-shrink: 0;
+}
+
+.avatar-placeholder.small {
+  width: 52px;
+  height: 52px;
+}
+
+.avatar-placeholder.tiny {
+  width: 42px;
+  height: 42px;
+}
+
+.thread-panel {
+  display: flex;
+  width: 750px;
+  flex-direction: column;
+  gap: 1.4rem;
+  padding: 1.25rem 1.5rem 1.5rem;
+  background: #f8f8f8;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+
+.bubble-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.bubble-row.center {
+  justify-content: center;
+}
+
+.message-bubble {
+  background: #dcdcdc;
+  border-radius: 18px;
+  height: 48px;
+}
+
+.message-bubble.long {
+  flex: 1;
+}
+
+.message-bubble.medium {
+  width: min(480px, 70%);
+}
+
+.message-bubble.wide {
+  width: min(500px, 72%);
+  height: 40px;
+}
+
+.compose-row {
+  margin-top: auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.input-placeholder {
+  background: #dcdcdc;
+  border-radius: 20px;
+  height: 48px;
+  width: 100%;
+}
+
+.send-btn {
+  background: #6c8acb;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  width: 70px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.send-btn:hover {
+  background: #5677bd;
+}
+
+.send-btn:active {
+  background: #4a6aa8;
+}
+
+.send-icon {
+  display: inline-block;
+  transform: translateX(2px);
+}
+
+@media (max-width: 960px) {
+  .messages-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .thread-list {
+    flex-direction: row;
+    overflow-x: auto;
+    border-right: none;
+    border-bottom: 2px solid #2F2C62;
+  }
+
+  .thread-item {
+    border-bottom: none;
+    border-right: 2px solid #2F2C62;
+    min-width: 240px;
+  }
+
+  .thread-item:last-child {
+    border-right: none;
+  }
 }
 
 /* Adventurer profile rating layout */
