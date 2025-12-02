@@ -805,6 +805,11 @@ select:focus-visible {
   place-items: center;
 }
 
+.icon-chip.active {
+  background: var(--active);
+  border-color: var(--active);
+}
+
 /* ----- Profile Menu Dropdown ----- */
 .profile-menu-wrapper {
   position: relative;
