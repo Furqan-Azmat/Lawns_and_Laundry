@@ -3,14 +3,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sign Up</title>
+  <title>Sign Up - Lawns & Laundry</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header id="banner_top">
-    <div id="logo"><img id="img_logo" src="images/LawnsLogoPlaceholder.png" alt="Logo" /></div>
-    <p id="website_name">Lawns &amp; Laundry</p>
-    <nav><a href="index.html" class="btn" data-nav>Home</a></nav>
+    <div id="logo"><img id="img_logo" src="images/icons/lawns&Laundry-logo.png" alt="Logo" /></div>
+    <nav>
+      <a href="index.html" class="btn" data-nav>Home</a>
+      <a href="services.html" class="btn" data-nav>Services</a>
+    
+    </nav>
+    
   </header>
 
   <main class="page-wrap">
@@ -45,14 +49,14 @@
         </div>
 
       <div class="form-group">
-          <label for="user-type">I want to sign up as a...:</label>
+          <label>I want to sign up as a...:</label>
 
-        <div id="user-type" class="radio-group" role="radiogroup" aria-labelledby="user-type-label" >
+        <div class="checkbox-group">
 
-          <input type="radio" name="user-type" id="Adventurer">
+          <input type="checkbox" name="user-type" id="Adventurer" value="adventurer">
           <label for="Adventurer">Adventurer</label>
           
-          <input type="radio" name="user-type" id="QuestGiver">
+          <input type="checkbox" name="user-type" id="QuestGiver" value="questgiver">
           <label for="QuestGiver">Quest Giver</label>
 
         </div>
@@ -76,9 +80,7 @@
       </form>
     </section>
 
-    <div class="back-button">
-      <a href="index.html" class="btn">Back to Main Page</a>
-    </div>
+  
   </main>
 
   <script src="script.js" defer></script>

@@ -333,3 +333,26 @@ setupQuestViewCTA();
   
   
 })();
+//Apply settings in settings menu by giving notifications
+function applySetting(type) {
+    if (type === 'password') {
+        const pwdInput = document.getElementById('new-password');
+        const notif = document.getElementById('password-notification');
+        if (pwdInput.value.trim() !== '') {
+            notif.textContent = 'Password changed successfully!';
+            notif.style.display = 'block';
+            pwdInput.value = ''; 
+        }
+    }
+
+    if (type === 'email') {
+        const emailInput = document.getElementById('new-email');
+        const notif = document.getElementById('email-notification');
+        if (emailInput.value.trim() !== '') {
+            notif.textContent = 'Email updated successfully!';
+            notif.style.display = 'block';
+            emailInput.value = ''; 
+        }
+    }
+}
+
