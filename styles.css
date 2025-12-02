@@ -571,7 +571,7 @@ select:focus-visible {
 
 #guildReceptionistImg {
   width: 100%;
-  max-width: 31.25rem;
+  max-width: 34.375rem;
   height: auto;
   border-radius: 1rem;
 }
@@ -736,7 +736,7 @@ select:focus-visible {
 
 
 /* =============================================
-   questView.html (Quest Board Page)
+   questBoard.html (Quest Board Page)
    ============================================= */
 
 /* ----- Page Layout ----- */
@@ -801,8 +801,12 @@ select:focus-visible {
   place-items: center;
 }
 
-.icon-chip.active {
+.icon-chip:hover {
   background: #e5e7eb;
+}
+
+.icon-chip.active {
+  background: var(--active);
   border-color: var(--active);
 }
 

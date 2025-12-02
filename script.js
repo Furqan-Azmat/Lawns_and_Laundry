@@ -22,7 +22,7 @@
     login: "login.html",
     signup: "signup.html",
     post: "postquest.html",
-    questview: "questView.html"
+    questview: "questBoard.html"
   };
 
   // An object to handle user authentication using the browser's localStorage.
@@ -50,9 +50,9 @@
       if (!this.isLoggedIn()) return;
       const alreadyRedirected = sessionStorage.getItem(this.redirectKey) === "1";
       const currentPage = location.pathname.split("/").pop();
-      if (alreadyRedirected || currentPage === "questView.html") return;
+      if (alreadyRedirected || currentPage === "questBoard.html") return;
       sessionStorage.setItem(this.redirectKey, "1");
-      location.href = "questView.html";
+      location.href = "questBoard.html";
     },
 
     redirectKey: "ll_redirected_questview"
