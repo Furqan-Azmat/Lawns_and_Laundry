@@ -168,7 +168,7 @@ function setupQuestViewCTA() {
   if (accountBtn) {
     accountBtn.addEventListener("click", () => {
       closeMenu();
-      window.location.href = "questGiverRating.html"; 
+      window.location.href = "Accounts.html"; 
     });
   }
 
