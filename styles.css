@@ -1996,17 +1996,18 @@ background:  #433E8C;
   .stat-item:nth-last-child(-n+2) {
     border-bottom: none;
   }
-}
 
 @media (max-width: 1200px) {
   .admin-columns {
     grid-template-columns: 1fr;
   }
+
   .admin-stats {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
 }
 
+<<<<<<< HEAD
 /* ============================================
    GUILD PAGE STYLES
    ============================================ */
@@ -2156,3 +2157,23 @@ background:  #433E8C;
     font-size: 2rem;
   }
 }
+=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+>>>>>>> b8cdc7eb2928c67f9fa131544804fccd091098db
