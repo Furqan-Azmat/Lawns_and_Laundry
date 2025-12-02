@@ -24,61 +24,73 @@
         </nav>
     </header>
 
+    <!-- Settings layout: left panel + main content -->
+    <div class="settings-layout">
+
         <!-- Left Settings Panel -->
-    <aside class="settings-sidebar">
-        <div class="settings-avatar">
-            <img src="images/placeholder.png" alt="User avatar" />
-        </div>
+        <aside class="settings-sidebar" aria-label="Settings navigation">
+            <div class="settings-avatar">
+                <img src="images/placeholder.png" alt="User avatar" />
+            </div>
 
-        <h1 class="settings-heading">Settings</h1>
+            <h1 class="settings-heading">Settings</h1>
 
-        <nav class="settings-nav" aria-label="Settings sections">
-            <a href="messages.html" class="settings-nav-item">
-                <img src="images/mail.png" alt="" class="settings-nav-icon" />
-                <span>Messages</span>
-            </a>
+            <nav class="settings-nav" aria-label="Settings sections">
+                <a href="messages.html" class="settings-nav-item">
+                    <img src="images/mail.png" alt="" class="settings-nav-icon" />
+                    <span>Messages</span>
+                </a>
 
-            <a href="questgiver.html" class="settings-nav-item">
-                <img src="images/navigation.png" alt="" class="settings-nav-icon" />
-                <span>Quests</span>
-            </a>
+                <a href="questgiver.html" class="settings-nav-item">
+                    <img src="images/navigation.png" alt="" class="settings-nav-icon" />
+                    <span>Quests</span>
+                </a>
 
-            <a href="settings.html" class="settings-nav-item is-active">
-                <img src="images/settings.png" alt="" class="settings-nav-icon" />
-                <span>Account Settings</span>
-            </a>
-        </nav>
-    </aside>
-
+                <a href="settings.html" class="settings-nav-item is-active">
+                    <img src="images/settings.png" alt="" class="settings-nav-icon" />
+                    <span>Account Settings</span>
+                </a>
+            </nav>
+        </aside>
 
         <!-- Main content -->
-        <!-- Main content container -->
-<!-- Main content container -->
-<main class="main-content" style="margin-left: 400px; max-width: 900px;">
-    <section class="card quest-hub" aria-label="Settings Menu">
-        <header class="detail-header">
-            <h2>Account Settings</h2>
-        </header>
+<main class="main-content" style="margin-left: 90px; max-width: 900px; margin-top: -100px;">
+            <section class="card quest-hub" aria-label="Account settings">
+                <header class="detail-header">
+                    <h2>Account Settings</h2>
+                </header>
 
-        <!-- Reset Password -->
-        <div class="settings-item card">
-            <h3>Reset Password</h3>
-            <input type="password" id="new-password" placeholder="Enter new password" class="settings-input" />
-            <button class="btn" onclick="applySetting('password')">Apply</button>
-            <p id="password-notification" class="notification"></p>
-        </div>
+                <!-- Reset Password -->
+                <div class="settings-item card">
+                    <h3>Reset Password</h3>
+                    <input
+                        type="password"
+                        id="new-password"
+                        placeholder="Enter new password"
+                        class="settings-input"
+                    />
+                    <button class="btn" onclick="applySetting('password')">Apply</button>
+                    <p id="password-notification" class="notification"></p>
+                </div>
 
-        <!-- Change Email -->
-        <div class="settings-item card">
-            <h3>Change Email</h3>
-            <input type="email" id="new-email" placeholder="Enter new email" class="settings-input" />
-            <button class="btn" onclick="applySetting('email')">Apply</button>
-            <p id="email-notification" class="notification"></p>
-        </div>
+                <!-- Change Email -->
+                <div class="settings-item card">
+                    <h3>Change Email</h3>
+                    <input
+                        type="email"
+                        id="new-email"
+                        placeholder="Enter new email"
+                        class="settings-input"
+                    />
+                    <button class="btn" onclick="applySetting('email')">Apply</button>
+                    <p id="email-notification" class="notification"></p>
+                </div>
 
-    </section>
-</main>
+            </section>
+        </main>
 
+    </div>
+
+    <script src="script.js" defer></script>
 </body>
-<script src="script.js" defer></script>
 </html>

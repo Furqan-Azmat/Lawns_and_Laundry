@@ -2204,17 +2204,30 @@ background:  var(--active);
 
 
 .settings-sidebar {
-    position: absolute;
-    top: 150px;           /* move up/down as you like */
-    left: 60px;           /* move closer/further from the edge */
     width: 330px;
-    background: #2f2978;  /* dark purple card */
+    background: #2f2978;
     border-radius: 40px;
     padding: 2.5rem 2.25rem 3rem;
     box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
 }
 
-/* big circle avatar */
+.main-content {
+  flex: 1;
+  max-width: 900px;
+}
+
+main {
+  padding-top: 120px;
+  flex: 0;
+}
+
+.settings-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+  padding: 140px 3rem 3rem;  /* top padding = header height + a bit */
+}
+
 .settings-avatar {
     width: 220px;
     height: 220px;
@@ -2235,7 +2248,6 @@ background:  var(--active);
     margin: 0 auto;
 }
 
-/* "Settings" heading */
 .settings-heading {
     font-family: "Determination Mono", system-ui, -apple-system, BlinkMacSystemFont,
                  "Segoe UI", sans-serif;
@@ -2244,7 +2256,6 @@ background:  var(--active);
     margin-bottom: 2.5rem;
 }
 
-/* nav links inside card */
 .settings-nav {
     display: flex;
     flex-direction: column;
@@ -2308,9 +2319,8 @@ background:  var(--active);
   filter: grayscale(50%) opacity(0.6);
 }
 
-<<<<<<< HEAD
-}
-=======
+/* <<<<<< HEAD */
+
 .lock-overlay {
   position: absolute;
   top: 50%;
@@ -3394,4 +3404,3 @@ background:  var(--active);
     font-size: 2rem;
   }
 }
->>>>>>> 5d306efdb93071c49486927fc41de9feb657700c
