@@ -1251,13 +1251,20 @@ select:focus-visible {
 .sidebar-1 {
   left: 0;
   background-color: #5E5C7E;
+  width: 50px;
+}
+
+/* Sidebar Admin (for admin pages) */
+.sidebar-admin {
+  left: 0;
+  background-color: #5E5C7E;
   width: 200px;
   padding: 1rem 0;
   display: flex;
   flex-direction: column;
 }
 
-.sidebar-1 nav {
+.sidebar-admin nav {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
