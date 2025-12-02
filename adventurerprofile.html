@@ -1,97 +1,137 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Adventurer Profile</title>
-    <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quest Giver | Lawns & Laundry</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
-    <main id="main" class="hub-layout" tabindex="-1"></main>
-<header id="banner_top" role="banner" aria-label="Top navigation">
+
+  <main id="main" class="hub-layout" tabindex="-1">
+
+    <!-- ===== HEADER NAVIGATION ===== -->
+    <header id="banner_top" role="banner" aria-label="Top navigation">
+      <!-- Skip Link for Accessibility -->
       <a class="skip-link" href="#main">Skip to content</a>
+
+      <!-- Logo -->
       <div id="logo" aria-label="Site logo">
-        <img id="img_logo" src="images/LawnsLogoPlaceholder.png" alt="Lawns & Laundry logo" />
+        <img id="img_logo" src="images/icons/lawns&Laundry-logo.png" alt="Lawns &amp; Laundry logo" />
       </div>
-      <p id="website_name" aria-label="Website name">Lawns & Laundry</p>
-      <nav aria-label="Primary">
-        <a href="index.html" class="btn" data-nav>Home</a>
-        <a href="services.html" class="btn" data-nav>Services</a>
+
+      <!-- Main Navigation Buttons (Centered) -->
+      <nav class="quest-nav" aria-label="Primary">
+        <a href="adventurerprofile.html" class="icon-chip square book-icon active" aria-label="Profile Hub"
+          style="background-color: #B8B5E5; border-color: #B8B5E5;">
+          <img src="images/icons/book icon.png" alt="Profile Hub" />
+        </a>
+        <a href="questview.html" class="icon-chip square " aria-label="Quest Board">
+          <img src="images/icons/sword icon.png" alt="Quest Board" />
+        </a>
+        <a href="guild.html" class="icon-chip square " aria-label="Guild">
+          <img src="images/icons/guild icon.png" alt="Guild" />
+        </a>
       </nav>
+
+      <!-- Right Side Navigation -->
+      <div class="nav-right">
+        <!-- Notifications Bell -->
+        <a href="messages.html" class="icon-chip" aria-label="Notifications">
+          <img src="images/icons/bell icon.png" alt="Notifications">
+          <span class="badge">3</span>
+        </a>
+        <!-- Profile Menu -->
+        <div class="profile-menu-wrapper">
+          <button class="icon-chip" id="questProfileBtn" aria-label="Profile">
+            <img src="images/icons/profile icon.png" alt="Profile">
+          </button>
+          <div class="profile-menu" id="questProfileMenu" role="menu" aria-label="Profile options">
+            <button id="questProfileAccount" role="menuitem">Your Account</button>
+            <button id="questProfileSettings" role="menuitem">Settings</button>
+            <button id="questProfileSignout" role="menuitem">Sign Out</button>
+          </div>
+        </div>
+      </div>
     </header>
 
+
+    <!--sidebar 1 -->
     <div class="sidebar sidebar-1">
-            <button class="icon-btn active" onclick="location.href='questgiver.html'"><img
-                    src="images/navigation.png" /></button>
-            <button class="icon-btn" onclick="location.href='questgiversearch.html'"><img
-                    src="images/search.png" /></button>
-            <button class="icon-btn" onclick="location.href='questgiverrecent.html'"><img
-                    src="images/clock.png" /></button>
-        </div>
+      <button class="icon-btn active" onclick="location.href='questgiver.html'"><img
+          src="images/icons/navigation.png" /></button>
+      <button class="icon-btn" onclick="location.href='questgiversearch.html'"><img
+          src="images/icons/search.png" /></button>
+      <button class="icon-btn" onclick="location.href='questgiverrecent.html'"><img
+          src="images/icons/clock.png" /></button>
+    </div>
 
-        <div class="sidebar-group">
-            <h2 class="group-title">Quest Giver Hub</h2>
+    <!--sidebar 2 + 3 -->
+    <div class="sidebar-group">
+      <h2 class="group-title">Adventurer Hub</h2>
 
-            <div class="sidebar sidebar-2">
-                <button class="icon-btn-big"><img src="images/placeholder.png" /></button>
-                <button class="icon-btn-big"><img src="images/placeholder.png" /></button>
+      <div class="sidebar sidebar-2">
+        <button class="icon-btn-big active" onclick="location.href='adventurerprofile.html'"><img
+            src="images/placeholder.png" /></button>
+        <button class="icon-btn-big" onclick="location.href='questgiver.html'"><img
+            src="images/placeholder.png" /></button>
+      </div>
+
+      <div class="sidebar sidebar-3">
+        <a class="side-link" href="adventureraccepted.html">Accepted Quests</a>
+        <a class="side-link" href="adventurercompleted.html">Completed Quests</a>
+        <a class="side-link active" href="adventurerprofile.html">My Rating</a>
+      </div>
+    </div>
+
+
+    <!-- main card -->
+    <section class="card quest-hub" aria-label="Quest Giver Hub">
+      <div class="hub-layout">
+
+        <!--profile and rating -->
+        <section class="hub-profile">
+          <div class="profile-summary">
+            <img src="images/placeholder.png" alt="Profile picture" class="profile-pic" />
+            <h3>Adventurer Level</h3>
+          </div>
+
+
+          <!--testing-->
+          <div class="exp-row">
+            <div class="exp-bar-header">
+              <div class="left">
+                <h3>Adventurer Rank</h3>
+                <p class="subtext">Adventurer Exp</p>
+              </div>
+
+              <div class="right">
+                <span class="exp-amount">3</span>
+                <p class="subtext">700/900</p>
+              </div>
             </div>
 
-            <div class="sidebar sidebar-3">
-                <a class="side-link active" href="questgiverlisted.html">Listed Quests</a>
-                <a class="side-link" href="questgiverpast.html">Past Quests</a>
-                <a class="side-link" href="questgiver.html">My Rating</a>
-                 <a class="side-link" href="adventurerprofile.html">Adventurer Profile</a>
+            <div class="exp-bar">
+              <div class="exp-bar-fill" style="width: 90%;;"></div>
             </div>
-        </div>
+          </div>
 
-        <section class="profile-rating-page">
-            <div class="rating-card" aria-label="Adventurer rating summary">
-                <div class="rating-avatar" aria-hidden="true"></div>
+      </div>
+    </section>
 
-                <div class="rating-header">
-                    <p class="rating-label">Overall Rating</p>
-                    <p class="rating-value">4.5 <span aria-hidden="true">&#9733;</span></p>
-                </div>
+    </div>
+    </section>
+    </section>
 
-                <div class="rating-breakdown-list" aria-label="Rating breakdown">
-                    <div class="rating-row">
-                        <div class="rating-bar" aria-hidden="true">
-                            <div class="rating-bar-fill" style="width: 85%;"></div>
-                        </div>
-                        <div class="rating-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    </div>
-                    <div class="rating-row">
-                        <div class="rating-bar" aria-hidden="true">
-                            <div class="rating-bar-fill" style="width: 55%;"></div>
-                        </div>
-                        <div class="rating-stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;</div>
-                    </div>
-                    <div class="rating-row">
-                        <div class="rating-bar" aria-hidden="true">
-                            <div class="rating-bar-fill" style="width: 65%;"></div>
-                        </div>
-                        <div class="rating-stars" aria-label="4 out of 5 stars">&#9733;&#9733;&#9733;</div>
-                    </div>
-                    <div class="rating-row">
-                        <div class="rating-bar" aria-hidden="true">
-                            <div class="rating-bar-fill" style="width: 45%;"></div>
-                        </div>
-                        <div class="rating-stars" aria-label="3 out of 5 stars">&#9733;&#9733;</div>
-                    </div>
-                    <div class="rating-row">
-                        <div class="rating-bar" aria-hidden="true">
-                            <div class="rating-bar-fill" style="width: 25%;"></div>
-                        </div>
-                        <div class="rating-stars" aria-label="1 out of 5 stars">&#9733;</div>
-                    </div>
-                </div>
-            </div>
-        </section>
+  </main>
 
-       <!-- Footer -->
+  <!-- ===== FOOTER ===== -->
   <footer id="footer" role="contentinfo" aria-label="Footer">
     <div class="footer-content">
-      <div id="product"> 
+      <div id="product">
         <h3>Product</h3>
         <ul>
           <li><a href="#">iOS App</a></li>
@@ -128,8 +168,11 @@
       </div>
 
       <p> © 2025 Lawns &amp; Laundry · All Rights Reserved </p>
-         
+
     </div>
   </footer>
+
+  <script src="script.js" defer></script>
 </body>
+
 </html>
