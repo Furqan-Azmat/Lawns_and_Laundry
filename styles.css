@@ -168,6 +168,7 @@ body {
   max-height: 5rem;
   height: auto;
   display: block;
+  padding-left: 0.5rem;
 }
 
 #banner_top nav {
