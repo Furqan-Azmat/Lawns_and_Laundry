@@ -1322,7 +1322,8 @@ select:focus-visible {
   width: 18.75rem;              
   height: calc(100% - 6.25rem);
   background: #433E8C;
-  padding-top: 3.125rem;         
+  padding-top: 3.125rem;
+  overflow: visible;
 }
 
 .sidebar-group-search {
@@ -1384,6 +1385,7 @@ select:focus-visible {
   width: 7.5rem;
   height: calc(100% - 3.125rem);
   background: #433E8C;
+  overflow: visible;
 }
 
 .sidebar-3 {
@@ -1454,6 +1456,7 @@ background:  var(--active);
   width: 7.5rem;
   height: 7.5rem;
   background:#ffffff;
+  position: relative;
 }
 
 .icon-btn-big:hover {
@@ -1469,6 +1472,8 @@ background:  var(--active);
   height: 6.875rem;
   border-radius: 50%;
 }
+
+
 
 
 /* =============================================
