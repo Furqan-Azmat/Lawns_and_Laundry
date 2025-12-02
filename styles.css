@@ -4012,4 +4012,138 @@ main {
   }
 }
 
+/* MY ACCOUNT / PROFILE LAYOUT*/
+
+.settings-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+  padding: 140px 3rem 3rem;
+}
+
+.main-content {
+  flex: 1;
+  max-width: 900px;
+}
+
+
+.account-profile-card {
+  width: min(900px, 100%);
+  padding: 2.25rem 2.5rem 2.75rem;
+  border-radius: 1.5rem;
+   margin: -10rem;  
+}
+
+.account-profile-header {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+
+.account-profile-identity {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.account-profile-name {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.account-profile-username {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #6b7280;
+}
+
+.account-profile-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.account-role-pill {
+  font-size: 0.95rem;
+  background: #eef2ff;
+  border-color: #c7d2fe;
+}
+
+.account-profile-section {
+  margin-top: 2rem;
+}
+
+.account-profile-section h3 {
+  margin: 0 0 0.25rem;
+  font-size: 1.3rem;
+}
+
+.account-profile-helper {
+  margin: 0 0 0.75rem;
+  font-size: 0.95rem;
+  color: #6b7280;
+}
+
+.account-profile-box {
+  background: #f9fafb;
+  border: 1px dashed #cbd5e1;
+  border-radius: 0.9rem;
+  padding: 1.25rem 1.5rem;
+}
+
+.account-photo-box {
+  margin-top: 0.35rem;
+}
+
+.account-profile-placeholder {
+  margin: 0;
+  color: #9ca3af;
+  font-size: 0.98rem;
+}
+
+.account-profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+  display: block;
+}
+
+.account-profile-actions {
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+.account-profile-avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 1.25rem;
+  background: #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+
+
+.btn-small {
+    font-size: 0.95rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.8rem;
+}
+
+
+.settings-layout .account-profile-card {
+  margin: -4rem 0 0 0;   
+}
+
+
+
+
 
