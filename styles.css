@@ -1218,17 +1218,16 @@ select:focus-visible {
 
 .rating-bar {
   flex-grow: 1;     
-  background-color: #e2e8f0;
+  background-color: #ADA7A7;
   height: 1rem;
-  border-radius: 6px;
    max-width: 480px;
   overflow: hidden;
 }
 
 .rating-fill {
-  background-color: gold;
+  background-color: #ADA7A7;
   height: 100%;
-  border-radius: 6px 0 0 6px;
+
 }
 
 
@@ -1250,7 +1249,7 @@ select:focus-visible {
 /* Sidebar 1 (leftmost) */
 .sidebar-1 {
   left: 0;
-  background-color: #433E8C;
+  background-color: #5E5C7E;
   width:50px;
 }
 
@@ -1309,11 +1308,11 @@ select:focus-visible {
   width: 100%;
   text-align: center;
   padding: 10px 0;
-  background: #433E8C;
+  background: #37327B;
   color: white;
   font-size: 22px;
   font-weight: bold;
-  border-bottom: 2px solid #433E8C;
+  border-bottom: 4px solid #37327B;
 }
 
 /* Sidebar 2 and 3 inside the group */
@@ -1321,7 +1320,7 @@ select:focus-visible {
   position: absolute;
   top: 50px;     
   left: 0;
-  width: 150px;
+  width: 120px;
   height: calc(100% - 50px);
   background: #433E8C;
 }
@@ -1330,9 +1329,10 @@ select:focus-visible {
   position: absolute;
   top: 50px;
   right: 0;
-  width: 150px;
+  width: 180px;
   height: calc(100% - 50px);
   background: #433E8C;
+  border-left:3px solid #2F2C62;
 }
 
 .sidebar-23 {
@@ -1346,20 +1346,21 @@ select:focus-visible {
 
 
 /* link style */
-.sidebar a {
+.sidebar a {  
   display: block;
   padding: 9px;
-  color: #d5f3f8;
+  color: hsl(0, 0%, 0%);
+  background-color: #ffffff;
   text-decoration: none;
 }
 
 .sidebar a:hover {
-  background: #433E8C;
+  background: var(--active);
 }
 
 
 .side-link.active {
-background:  #433E8C;
+background:  var(--active);
 }
 
 
@@ -1370,12 +1371,11 @@ background:  #433E8C;
   padding: 0;
   display: block;
   cursor: pointer;
-  background-color: #433E8C;
 }
 
 .icon-btn:hover {
   
-  background:#15424b
+  background: var(--active);
 }
 
 .icon-btn.active {
@@ -1389,16 +1389,16 @@ background:  #433E8C;
 .icon-btn-big {
   border: none;
   display:block;
-  width: 150px;
-  height: 150px;
-  background:#433E8C;
+  width: 120px;
+  height: 120px;
+  background:#ffffff;
 }
 
 .icon-btn-big:hover {
-  background:#15424b
+  background: var(--active);
 }
 .icon-btn-big.active {
-  background:#15424b
+    background: var(--active);
 }
 
 .icon-btn-big img {
@@ -1465,6 +1465,9 @@ background:  #433E8C;
     border-radius: 10px;
     overflow: hidden;
 }
+
+
+
 
 .exp-fill {
     height: 100%;
@@ -1766,13 +1769,13 @@ background:  #433E8C;
 .rating-bar {
   flex: 1;
   height: 20px;
-  background: #a59ba6;
+  background: #D9D9D9;
   overflow: hidden;
 }
 
 .rating-bar-fill {
   height: 100%;
-  background: #d8d7db;
+  background: #ADA7A7;
 }
 
 .rating-stars {
@@ -1798,6 +1801,53 @@ background:  #433E8C;
   text-align: center;
   }
 }
+
+.exp-row {
+  display: block;
+  align-items: center;
+  gap: 1rem;
+}
+
+.exp-bar {
+  flex: 1;
+  height: 20px;
+  background: #D9D9D9;
+  overflow: hidden;
+  border-radius: 0%;
+}
+
+.exp-bar-fill {
+  height: 100%;
+  background: #ADA7A7;
+}
+
+.exp-bar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 4px;
+}
+
+.exp-bar-header .left,
+.exp-bar-header .right {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.exp-bar-header h3,
+.exp-bar-header .exp-amount {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.exp-bar-header .subtext {
+    margin: 0;
+    font-size: 0.8rem;
+    opacity: 0.75;    
+}
+
 
 /* Quest giver listed page */
 .quest-listing {
