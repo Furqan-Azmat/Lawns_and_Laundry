@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Settings | Lawns & Laundry</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <!-- Header / Banner -->
+    <header id="banner_top" role="banner" aria-label="Top navigation">
+        <a class="skip-link" href="#main">Skip to content</a>
+        <div id="logo" aria-label="Site logo">
+            <img id="img_logo" src="images/LawnsLogoPlaceholder.png" alt="Lawns & Laundry logo" />
+        </div>
+        <p id="website_name" aria-label="Website name">Lawns & Laundry</p>
+        <nav aria-label="Primary">
+            <a href="index.html" class="btn" data-nav>Home</a>
+            <a href="services.html" class="btn" data-nav>Services</a>
+            <a href="login.html" id="login_link" class="btn" data-nav>Login</a>
+        </nav>
+    </header>
+
+        <!-- Left Settings Panel -->
+    <aside class="settings-sidebar">
+        <div class="settings-avatar">
+            <img src="images/placeholder.png" alt="User avatar" />
+        </div>
+
+        <h1 class="settings-heading">Settings</h1>
+
+        <nav class="settings-nav" aria-label="Settings sections">
+            <a href="messages.html" class="settings-nav-item">
+                <img src="images/mail.png" alt="" class="settings-nav-icon" />
+                <span>Messages</span>
+            </a>
+
+            <a href="questgiver.html" class="settings-nav-item">
+                <img src="images/navigation.png" alt="" class="settings-nav-icon" />
+                <span>Quests</span>
+            </a>
+
+            <a href="settings.html" class="settings-nav-item is-active">
+                <img src="images/settings.png" alt="" class="settings-nav-icon" />
+                <span>Account Settings</span>
+            </a>
+        </nav>
+    </aside>
+
+
+        <!-- Main content -->
+        <!-- Main content container -->
+<!-- Main content container -->
+<main class="main-content" style="margin-left: 400px; max-width: 900px;">
+    <section class="card quest-hub" aria-label="Settings Menu">
+        <header class="detail-header">
+            <h2>Account Settings</h2>
+        </header>
+
+        <!-- Reset Password -->
+        <div class="settings-item card">
+            <h3>Reset Password</h3>
+            <input type="password" id="new-password" placeholder="Enter new password" class="settings-input" />
+            <button class="btn" onclick="applySetting('password')">Apply</button>
+            <p id="password-notification" class="notification"></p>
+        </div>
+
+        <!-- Change Email -->
+        <div class="settings-item card">
+            <h3>Change Email</h3>
+            <input type="email" id="new-email" placeholder="Enter new email" class="settings-input" />
+            <button class="btn" onclick="applySetting('email')">Apply</button>
+            <p id="email-notification" class="notification"></p>
+        </div>
+
+    </section>
+</main>
+
+</body>
+<script src="script.js" defer></script>
+</html>
