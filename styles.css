@@ -58,7 +58,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background: var(--primary-btn);
+  background: #e5e7eb;
   color: rgba(255, 255, 255, 0.8);
   border: none;
   padding: 1rem 1.2rem;
@@ -78,7 +78,7 @@ body {
 }
 .btn:active {
   transform: translateY(0);
-  background: var(--active);
+  background: #e5e7eb;
   color: var(--text);
 }
 .btn:focus-visible {
@@ -91,7 +91,7 @@ body {
 }
 
 .btn-primary {
-  background: var(--primary-btn);
+  background: #e5e7eb;
   --btn-bg: var(--primary-btn);
 }
 
@@ -114,7 +114,7 @@ body {
 }
 .btn.ghost:hover {
   transform: none;
-  background: #e2e8f0;
+  background: #e5e7eb;
 }
 .btn.wide {
   width: 100%;
@@ -443,23 +443,20 @@ select:focus-visible {
 #footer {
   background: var(--footer);
   color: var(--light-text);
-  padding: 1rem 0 1rem 0;         /* Adjust: top right bottom left - no side padding */
+  padding: 1rem 2rem;
   margin-top: 2rem;  
-  margin-bottom: 0;               /* Adjust: spacing above footer */
-  margin-left: 0;                 /* Remove any inherited margins */
-  margin-right: 0;
-  width: 100vw;                   /* Use viewport width instead */
+  margin-bottom: 0;
+  margin-left: 50px;
+  width: calc(100vw - 50px);
   box-sizing: border-box;
   position: relative;
-  left: 0;
-  right: 0;
+  z-index: 200;
 }
 
 .footer-content {
-  max-width: 100%;                /* Full width */
-  margin: 0;                      /* No centering margin */
-  padding-left: 2rem;             /* Left padding */
-  padding-right: 2rem;          /* Minimal right padding */
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;                    /* Smaller gap between columns */
@@ -740,7 +737,7 @@ select:focus-visible {
 
 
 /* =============================================
-   QUESTVIEW.HTML (Quest Board Page)
+   questView.html (Quest Board Page)
    ============================================= */
 
 /* ----- Page Layout ----- */
@@ -806,7 +803,7 @@ select:focus-visible {
 }
 
 .icon-chip.active {
-  background: var(--active);
+  background: #e5e7eb;
   border-color: var(--active);
 }
 
@@ -1123,7 +1120,7 @@ select:focus-visible {
 
 
 /* =============================================
-   QUESTGIVER.HTML
+   questGiver.html
    ============================================= */
 
 .quest-hub {
@@ -1152,6 +1149,11 @@ select:focus-visible {
 .hub-profile {
   flex: 1;
   min-width: 300px;
+}
+
+.quest-card .hub-profile {
+  flex: none;
+  width: 100%;
 }
 
 .profile-summary {
@@ -1214,7 +1216,7 @@ select:focus-visible {
 
 
 .bar-bg {
-  background: #e2e8f0;
+  background: #e5e7eb;
   border-radius: 999px;
   overflow: hidden;
   height: 1rem;
@@ -1244,8 +1246,8 @@ select:focus-visible {
 .sidebar {
   position: fixed;
   top: 100px; 
+  bottom: 0;
   width: 200px;
-  height: calc(100% - 100px);
   overflow-y: auto;
   background: #433E8C;
   color: white;
@@ -1399,11 +1401,11 @@ background:  var(--active);
 
 .icon-btn:hover {
   
-  background: var(--active);
+  background: #e5e7eb;
 }
 
 .icon-btn.active {
-  background: var(--active);
+  background: #e5e7eb;
 }
 .icon-btn img {
    width: 50px;
@@ -1419,10 +1421,11 @@ background:  var(--active);
 }
 
 .icon-btn-big:hover {
-  background: var(--active);
+  background: #e5e7eb;
+  transform: translateY(-2px);
 }
 .icon-btn-big.active {
-    background: var(--active);
+  background: var(--active);
 }
 
 .icon-btn-big img {
@@ -1433,7 +1436,7 @@ background:  var(--active);
 
 
 /* =============================================
-   ADVENTURERPROFILE.HTML
+   adventurerRating.html
    ============================================= */
 
 .profile-wrapper {
@@ -1596,7 +1599,7 @@ background:  var(--active);
 }
 
 .thread-item.active {
-  background: var(--active);
+  background: #e5e7eb;
 }
 
 .thread-name {
@@ -2114,7 +2117,7 @@ background:  var(--active);
 .bar-fill {
   display: block;
   height: 100%;
-  background: var(--primary-btn);
+  background: #e5e7eb;
   border-radius: 999px;
 }
 
@@ -2708,7 +2711,7 @@ main {
 .bar-fill {
   display: block;
   height: 100%;
-  background: var(--primary-btn);
+  background: #e5e7eb;
   border-radius: 999px;
 }
 
@@ -3160,7 +3163,7 @@ main {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: var(--primary-btn);
+  background: #e5e7eb;
   color: #fff;
   display: flex;
   align-items: center;
@@ -3256,7 +3259,7 @@ main {
   padding: 0.4rem 0.75rem;
   border-radius: 0.5rem;
   border: 1px solid var(--ring);
-  background: var(--primary-btn);
+  background: #e5e7eb;
   color: #fff;
   font: inherit;
   font-size: 0.85rem;
@@ -3641,7 +3644,7 @@ main {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: var(--primary-btn);
+  background: #e5e7eb;
   color: #fff;
   display: flex;
   align-items: center;
@@ -3737,7 +3740,7 @@ main {
   padding: 0.4rem 0.75rem;
   border-radius: 0.5rem;
   border: 1px solid var(--ring);
-  background: var(--primary-btn);
+  background: #e5e7eb;
   color: #fff;
   font: inherit;
   font-size: 0.85rem;
