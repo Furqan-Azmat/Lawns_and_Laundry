@@ -50,7 +50,8 @@
       if (!this.isLoggedIn()) return;
       const alreadyRedirected = sessionStorage.getItem(this.redirectKey) === "1";
       const currentPage = location.pathname.split("/").pop();
-      if (alreadyRedirected || currentPage === "questBoard.html") return;
+      // Don't redirect when already redirected, on quest board, or on admin pages
+      if (alreadyRedirected || currentPage === "questBoard.html" || currentPage === "admin.html") return;
       sessionStorage.setItem(this.redirectKey, "1");
       location.href = "questBoard.html";
     },
@@ -133,6 +134,15 @@
     if (signupForm) setupSignupForm(signupForm);
     if (questForm) setupQuestForm(questForm);
     if (passwordToggles.length > 0) setupPasswordToggles(passwordToggles);
+  
+  const adminLogout = document.getElementById("adminLogout");
+    if (adminLogout) {
+      adminLogout.addEventListener("click", () => {
+        auth.logout();
+        location.href = routes.home; // or routes.login if you prefer
+      });
+    }
+
     
   }
 
@@ -168,7 +178,7 @@ function setupQuestViewCTA() {
   if (accountBtn) {
     accountBtn.addEventListener("click", () => {
       closeMenu();
-      window.location.href = "questGiverRating.html"; 
+      window.location.href = "Accounts.html"; 
     });
   }
 
@@ -204,6 +214,13 @@ setupQuestViewCTA();
 
       if (!username || !password) {
         showMessage(form, "Please enter both username and password.", "error");
+        return;
+      }
+
+    if (username === "admin" && password === "admin123") {
+        showMessage(form, "Admin login successful! Redirecting...", "success");
+        auth.login({ username });
+        location.href = "admin.html";
         return;
       }
 
