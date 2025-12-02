@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>User Management | Lawns & Laundry</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header id="banner_top" role="banner" aria-label="Top navigation">
+        <div id="logo" aria-label="Site logo">
+            <img id="img_logo" src="images/icons/lawns&Laundry-logo.png" alt="Lawns &amp; Laundry logo" />
+        </div>
+        <nav aria-label="Primary">
+            <button class="icon-chip" aria-label="Inbox">
+                <img src="images/icons/bell icon.png" alt="Notifications" />
+                <span class="badge">3</span>
+            </button>
+            <button class="icon-chip" aria-label="Profile">
+                <img src="images/icons/profile icon.png" alt="Profile" />
+                <span class="badge" style="background: var(--green);"></span>
+            </button>
+        </nav>
+    </header>
+
+    <aside class="sidebar sidebar-1">
+        <nav aria-label="Admin navigation">
+            <a href="admin.html" class="side-link">Dashboard</a>
+            <a href="analytics.html" class="side-link">Analytics</a>
+            <a href="users.html" class="side-link active">Users</a>
+            <a href="#" class="side-link">Reports</a>
+            <a href="#" class="side-link">Documentation</a>
+        </nav>
+    </aside>
+
+    <main id="main" class="admin-layout" tabindex="-1">
+        <section class="admin-users-page" aria-label="User management">
+
+            <!-- Page Header -->
+            <div class="admin-users-header">
+                <div>
+                    <h1>User Management</h1>
+                    <p class="header-subtitle">Manage adventurers and quest givers</p>
+                </div>
+                <div class="header-actions">
+                    <button class="btn btn-primary">Add New User</button>
+                    <button class="btn btn-secondary">Export Data</button>
+                </div>
+            </div>
+
+            <!-- Search and Filter -->
+            <div class="users-toolbar">
+                <div class="input-icon">
+                    <img class="icon" src="images/icons/search icon.png" alt="" />
+                    <input type="search" placeholder="Search users by name, email, or ID..." aria-label="Search users" />
+                </div>
+                <div class="filter-group">
+                    <select aria-label="User type filter">
+                        <option>All Users</option>
+                        <option>Adventurers</option>
+                        <option>Quest Givers</option>
+                    </select>
+                    <select aria-label="Status filter">
+                        <option>All Status</option>
+                        <option>Active</option>
+                        <option>Inactive</option>
+                        <option>Suspended</option>
+                    </select>
+                    <select aria-label="Sort by">
+                        <option>Sort by: Date Joined</option>
+                        <option>Sort by: Name</option>
+                        <option>Sort by: Rating</option>
+                        <option>Sort by: Activity</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- User Stats Overview -->
+            <div class="admin-stats-section">
+                <div class="stat-grid">
+                    <div class="stat-item">
+                        <p class="eyebrow">Total Users</p>
+                        <p class="stat-value">1,428</p>
+                        <p class="stat-meta">+156 this month</p>
+                    </div>
+                    <div class="stat-item">
+                        <p class="eyebrow">Active Adventurers</p>
+                        <p class="stat-value">892</p>
+                        <p class="stat-meta">62% of total</p>
+                    </div>
+                    <div class="stat-item">
+                        <p class="eyebrow">Quest Givers</p>
+                        <p class="stat-value">536</p>
+                        <p class="stat-meta">38% of total</p>
+                    </div>
+                    <div class="stat-item">
+                        <p class="eyebrow">Avg. User Rating</p>
+                        <p class="stat-value">4.7</p>
+                        <p class="stat-meta">Based on 2,847 reviews</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Users Table -->
+            <div class="card users-table-card">
+                <div class="table-controls">
+                    <h2>All Users</h2>
+                    <div class="table-actions">
+                        <button class="btn-icon" aria-label="Refresh">
+                            <span>🔄</span>
+                        </button>
+                        <button class="btn-icon" aria-label="Filter">
+                            <span>⚙️</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="users-table-wrapper">
+                    <table class="users-table">
+                        <thead>
+                            <tr>
+                                <th>User</th>
+                                <th>Type</th>
+                                <th>Email</th>
+                                <th>Rating</th>
+                                <th>Rank</th>
+                                <th>Joined</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="user-cell">
+                                        <div class="user-avatar">SC</div>
+                                        <div class="user-info">
+                                            <strong>Johnny Boy</strong>
+                                            <span class="user-id">#ADV-1247</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="badge-type adventurer">Adventurer</span></td>
+                                <td>johnny.c@email.com</td>
+                                <td><span class="rating-badge">⭐ 4.9</span></td>
+                                <td><span class="rank-badge">3</span></td>
+                                <td>Jan 15, 2024</td>
+                                <td><span class="status-badge active">Active</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn-small">View</button>
+                                        <button class="btn-small ghost">Edit</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="user-cell">
+                                        <div class="user-avatar">JW</div>
+                                        <div class="user-info">
+                                            <strong>John Wick</strong>
+                                            <span class="user-id">#ADV-1089</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="badge-type both">Both</span></td>
+                                <td>j.wick@email.com</td>
+                                <td><span class="rating-badge">⭐ 4.8</span></td>
+                                <td><span class="rank-badge">5</span></td>
+                                <td>Dec 3, 2023</td>
+                                <td><span class="status-badge active">Active</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn-small">View</button>
+                                        <button class="btn-small ghost">Edit</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="user-cell">
+                                        <div class="user-avatar">GV</div>
+                                        <div class="user-info">
+                                            <strong>Green Valley HOA</strong>
+                                            <span class="user-id">#QG-0342</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="badge-type questgiver">Quest Giver</span></td>
+                                <td>contact@greenvalley.com</td>
+                                <td><span class="rating-badge">⭐ 4.8</span></td>
+                                <td>—</td>
+                                <td>Nov 22, 2023</td>
+                                <td><span class="status-badge active">Active</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn-small">View</button>
+                                        <button class="btn-small ghost">Edit</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="user-cell">
+                                        <div class="user-avatar">ER</div>
+                                        <div class="user-info">
+                                            <strong>Emma Frost</strong>
+                                            <span class="user-id">#ADV-1456</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="badge-type both">Both</span></td>
+                                <td>emma.f@email.com</td>
+                                <td><span class="rating-badge">⭐ 4.9</span></td>
+                                <td><span class="rank-badge">4</span></td>
+                                <td>Feb 8, 2024</td>
+                                <td><span class="status-badge active">Active</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn-small">View</button>
+                                        <button class="btn-small ghost">Edit</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="user-cell">
+                                        <div class="user-avatar">RA</div>
+                                        <div class="user-info">
+                                            <strong>Riverside Apartments</strong>
+                                            <span class="user-id">#QG-0289</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="badge-type questgiver">Quest Giver</span></td>
+                                <td>admin@riverside.com</td>
+                                <td><span class="rating-badge">⭐ 4.7</span></td>
+                                <td>—</td>
+                                <td>Oct 10, 2023</td>
+                                <td><span class="status-badge active">Active</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn-small">View</button>
+                                        <button class="btn-small ghost">Edit</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="user-cell">
+                                        <div class="user-avatar">MR</div>
+                                        <div class="user-info">
+                                            <strong>Lamia B)</strong>
+                                            <span class="user-id">#ADV-0978</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="badge-type adventurer">Adventurer</span></td>
+                                <td>lamia.b@email.com</td>
+                                <td><span class="rating-badge">⭐ 4.7</span></td>
+                                <td><span class="rank-badge">2</span></td>
+                                <td>Sep 5, 2023</td>
+                                <td><span class="status-badge inactive">Inactive</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn-small">View</button>
+                                        <button class="btn-small ghost">Edit</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="user-cell">
+                                        <div class="user-avatar">SM</div>
+                                        <div class="user-info">
+                                            <strong>Sunny</strong>
+                                            <span class="user-id">#QG-0421</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="badge-type questgiver">Quest Giver</span></td>
+                                <td>info@sunny@email.com</td>
+                                <td><span class="rating-badge">⭐ 4.9</span></td>
+                                <td>—</td>
+                                <td>Jan 30, 2024</td>
+                                <td><span class="status-badge active">Active</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn-small">View</button>
+                                        <button class="btn-small ghost">Edit</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="user-cell">
+                                        <div class="user-avatar">LN</div>
+                                        <div class="user-info">
+                                            <strong>Luke Nobody</strong>
+                                            <span class="user-id">#ADV-1523</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td><span class="badge-type adventurer">Adventurer</span></td>
+                                <td>luke.n@email.com</td>
+                                <td><span class="rating-badge">⭐ 4.5</span></td>
+                                <td><span class="rank-badge">1</span></td>
+                                <td>Mar 12, 2024</td>
+                                <td><span class="status-badge suspended">Suspended</span></td>
+                                <td>
+                                    <div class="action-buttons">
+                                        <button class="btn-small">View</button>
+                                        <button class="btn-small ghost">Edit</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Pagination -->
+                <div class="table-pagination">
+                    <div class="pagination-info">
+                        Showing 1-8 of 1,428 users
+                    </div>
+                    <div class="pagination-controls">
+                        <button class="btn-small ghost" disabled>Previous</button>
+                        <button class="btn-small">1</button>
+                        <button class="btn-small ghost">2</button>
+                        <button class="btn-small ghost">3</button>
+                        <span>...</span>
+                        <button class="btn-small ghost">179</button>
+                        <button class="btn-small ghost">Next</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer id="admin-footer" class="admin-footer" role="contentinfo">
+        <p>© 2025 Lawns &amp; Laundry · All Rights Reserved</p>
+    </footer>
+</body>
+</html>

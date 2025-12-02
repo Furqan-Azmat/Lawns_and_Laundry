@@ -8,31 +8,44 @@
 </head>
 <body>
     <header id="banner_top" role="banner" aria-label="Top navigation">
-        <a class="skip-link" href="#main">Skip to content</a>
         <div id="logo" aria-label="Site logo">
-            <img id="img_logo" src="images/LawnsLogoPlaceholder.png" alt="Lawns & Laundry logo" />
+            <img id="img_logo" src="images/icons/lawns&Laundry-logo.png" alt="Lawns &amp; Laundry logo" />
         </div>
-        <p id="website_name" aria-label="Website name">Lawns & Laundry</p>
         <nav aria-label="Primary">
-            <a href="index.html" class="btn" data-nav>Home</a>
-            <a href="services.html" class="btn" data-nav>Services</a>
+            <button class="icon-chip" aria-label="Inbox">
+                <img src="images/icons/bell icon.png" alt="Notifications" />
+                <span class="badge">3</span>
+            </button>
+            <button class="icon-chip" aria-label="Profile">
+                <img src="images/icons/profile icon.png" alt="Profile" />
+                <span class="badge" style="background: var(--green);"></span>
+            </button>
         </nav>
     </header>
 
-    <main id="main" class="admin-layout" tabindex="-1">
-        <section class="admin-page" aria-label="Admin dashboard">
-            <header class="admin-header">
-                <div>
-                    <p class="eyebrow">Dashboard</p>
-                    <h1>Admin Overview</h1>
-                </div>
-                <div class="admin-actions">
-                    <button class="btn btn-secondary">Invite User</button>
-                    <button class="btn btn-primary">Add Quest</button>
-                </div>
-            </header>
+    <aside class="sidebar sidebar-1">
+        <nav aria-label="Admin navigation">
+            <a href="admin.html" class="side-link active">Dashboard</a>
+            <a href="analytics.html" class="side-link">Analytics</a>
+            <a href="users.html" class="side-link">Users</a>
+            <a href="#" class="side-link">Reports</a>
+            <a href="#" class="side-link">Documentation</a>
+        </nav>
+    </aside>
 
-            <div class="card stat-band">
+    <main id="main" class="admin-layout" tabindex="-1">
+        <section class="admin-dashboard-page" aria-label="Admin dashboard">
+
+            <!-- Page Header -->
+            <div class="admin-dashboard-header">
+                <div>
+                    <h1>Dashboard Overview</h1>
+                    <p class="header-subtitle">Monitor platform activity and performance</p>
+                </div>
+            </div>
+
+            <!-- Main Stats Section -->
+            <div class="admin-stats-section">
                 <div class="stat-grid">
                     <div class="stat-item">
                         <p class="eyebrow">Active Quests</p>
@@ -57,7 +70,9 @@
                 </div>
             </div>
 
-            <div class="admin-columns">
+            <!-- Recent Activity Section -->
+            <div class="admin-activity-section">
+                <div class="admin-columns">
                 <div class="admin-main">
                     <div class="card admin-panel">
                         <header class="panel-header">
@@ -149,10 +164,13 @@
                         <p class="stat-meta">88% completion last week (+10%)</p>
                     </div>
                 </aside>
+                </div>
             </div>
 
-            <div class="admin-wide-grid">
-                <div class="card admin-table" aria-label="Users table">
+            <!-- Bottom Tables Section -->
+            <div class="admin-tables-section">
+                <div class="admin-wide-grid">
+                    <div class="card admin-table" aria-label="Users table">
                     <header class="panel-header">
                         <h2>Top Adventurers</h2>
                         <span class="pill">This month</span>
@@ -183,50 +201,12 @@
                         <div class="health-row"><span>Incidents</span><span class="health-value good">0 open</span></div>
                     </div>
                 </div>
+                </div>
             </div>
         </section>
     </main>
-       <!-- Footer -->
-  <footer id="footer" role="contentinfo" aria-label="Footer">
-    <div class="footer-content">
-      <div id="product"> 
-        <h3>Product</h3>
-        <ul>
-          <li><a href="#">iOS App</a></li>
-          <li><a href="#">Android App</a></li>
-          <li><a href="#">How It Works</a></li>
-        </ul>
-      </div>
-
-      <div id="company">
-        <h3>Company</h3>
-        <ul>
-          <li><a href="#">Contact Us</a></li>
-          <li><a href="#">News</a></li>
-          <li><a href="#">Blogs</a></li>
-        </ul>
-      </div>
-
-      <div id="community">
-        <h3>Community</h3>
-        <ul>
-          <li><a href="#">Community Guidelines</a></li>
-          <li><a href="#">Contributing to L&amp;L</a></li>
-          <li><a href="#">Translate L&amp;L</a></li>
-        </ul>
-      </div>
-
-      <div id="support">
-        <h3>Support</h3>
-        <ul>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Report a Bug</a></li>
-          <li><a href="#">Request a Feature</a></li>
-        </ul>
-      </div>
-
-      <p> © 2025 Lawns &amp; Laundry · All Rights Reserved </p>
-         
+    <footer id="admin-footer" class="admin-footer" role="contentinfo">
+      <p>© 2025 Lawns &amp; Laundry · All Rights Reserved</p>
     </div>
   </footer>
 </body>
