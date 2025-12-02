@@ -13,25 +13,56 @@
 
   <main id="main" class="hub-layout" tabindex="-1">
 
-    <header id="banner_top" role="banner" aria-label="Top navigation">
-      <a class="skip-link" href="#main">Skip to content</a>
-      <div id="logo" aria-label="Site logo">
-        <img id="img_logo" src="images/LawnsLogoPlaceholder.png" alt="Lawns &amp; Laundry logo" />
+      <!-- ===== HEADER NAVIGATION ===== -->
+  <header id="banner_top" role="banner" aria-label="Top navigation">
+    <!-- Skip Link for Accessibility -->
+    <a class="skip-link" href="#main">Skip to content</a>
+    
+    <!-- Logo -->
+    <div id="logo" aria-label="Site logo">
+      <img id="img_logo" src="images/icons/lawns&Laundry-logo.png" alt="Lawns &amp; Laundry logo" />
+    </div>
+    
+    <!-- Main Navigation Buttons (Centered) -->
+    <nav class="quest-nav" aria-label="Primary">
+      <a href="adventurerprofile.html" class="icon-chip square book-icon active" aria-label="Profile Hub" style="background-color: #B8B5E5; border-color: #B8B5E5;">
+        <img src="images/icons/book icon.png" alt="Profile Hub" />
+      </a>
+      <a href="questview.html" class="icon-chip square " aria-label="Quest Board" >
+        <img src="images/icons/sword icon.png" alt="Quest Board" />
+      </a>
+      <a href="guild.html" class="icon-chip square " aria-label="Guild">
+        <img src="images/icons/guild icon.png" alt="Guild" />
+      </a>
+    </nav>
+    
+    <!-- Right Side Navigation -->
+    <div class="nav-right">
+      <!-- Notifications Bell -->
+      <a href="messages.html" class="icon-chip" aria-label="Notifications">
+        <img src="images/icons/bell icon.png" alt="Notifications">
+        <span class="badge">3</span>
+      </a>
+      <!-- Profile Menu -->
+      <div class="profile-menu-wrapper">
+        <button class="icon-chip" id="questProfileBtn" aria-label="Profile">
+          <img src="images/icons/profile icon.png" alt="Profile">
+        </button>
+        <div class="profile-menu" id="questProfileMenu" role="menu" aria-label="Profile options">
+          <button id="questProfileAccount" role="menuitem">Your Account</button>
+          <button id="questProfileSettings" role="menuitem">Settings</button>
+          <button id="questProfileSignout" role="menuitem">Sign Out</button>
+        </div>
       </div>
-      <p id="website_name" aria-label="Website name">Lawns &amp; Laundry</p>
-      <nav aria-label="Primary">
-        <a href="index.html" class="btn" data-nav>Home</a>
-        <a href="services.html" class="btn" data-nav>Services</a>
-        <a href="login.html" id="login_link" class="btn" data-nav>Login</a>
-      </nav>
-    </header>
+    </div>
+  </header>
 
 
     <!--sidebar 1 -->
 <div class="sidebar sidebar-1">
-  <button  class="icon-btn active" onclick="location.href='questgiver.html'"><img src="images/navigation.png" /></button>
-  <button class="icon-btn" onclick="location.href='questgiversearch.html'"><img src="images/search.png" /></button>
-  <button class="icon-btn" onclick="location.href='questgiverrecent.html'"><img src="images/clock.png" /></button>
+  <button  class="icon-btn active" onclick="location.href='questgiver.html'"><img src="images/icons/navigation.png" /></button>
+  <button class="icon-btn" onclick="location.href='questgiversearch.html'"><img src="images/icons/search.png" /></button>
+  <button class="icon-btn" onclick="location.href='questgiverrecent.html'"><img src="images/icons/clock.png" /></button>
 </div>
 
 <!--sidebar 2 + 3 -->
@@ -39,15 +70,14 @@
   <h2 class="group-title">Quest Giver Hub</h2>
 
   <div class="sidebar sidebar-2">
-    <button class="icon-btn-big"><img src="images/placeholder.png" /></button>
-    <button class="icon-btn-big"><img src="images/placeholder.png" /></button>
+    <button class="icon-btn-big" onclick="location.href='adventurerprofile.html'"><img src="images/placeholder.png" /></button>
+    <button class="icon-btn-big active" onclick="location.href='questgiver.html'"><img src="images/placeholder.png" /></button>
   </div>
 
   <div class="sidebar sidebar-3">
-    <a class="side-link active" href="questgiverlisted.html">Listed Quests</a>
-                <a class="side-link" href="questgiverpast.html">Past Quests</a>
-                <a class="side-link" href="questgiver.html">My Rating</a>
-                 <a class="side-link" href="adventurerprofile.html">Adventurer Profile</a>
+    <a class="side-link" href="questgiverlisted.html">Listed Quests</a>
+    <a class="side-link" href="questgiverpast.html">Past Quests</a>
+    <a class="side-link active" href="questgiver.html">My Rating</a>
   </div>
 </div>
 
@@ -68,31 +98,31 @@
           <!--testing-->
           <div class="rating-row">
             <div class="rating-bar">
-              <div class="rating-fill" style="width: 90%;;"></div>
+              <div class="rating-bar-fill" style="width: 90%;;"></div>
             </div>
             <label>★★★★★</label>
           </div>
           <div class="rating-row">
             <div class="rating-bar">
-              <div class="rating-fill" style="width: 20%;;"></div>
+              <div class="rating-bar-fill" style="width: 20%;;"></div>
             </div>
             <label>★★★★</label>
           </div>
           <div class="rating-row">
             <div class="rating-bar">
-              <div class="rating-fill" style="width: 5%;;"></div>
+              <div class="rating-bar-fill" style="width: 5%;;"></div>
             </div>
             <label>★★★</label>
           </div>
           <div class="rating-row">
             <div class="rating-bar">
-              <div class="rating-fill" style="width: 3%;;"></div>
+              <div class="rating-bar-fill" style="width: 3%;;"></div>
             </div>
             <label>★★</label>
           </div>
           <div class="rating-row">
             <div class="rating-bar">
-              <div class="rating-fill" style="width: 5%;;"></div>
+              <div class="rating-bar-fill" style="width: 5%;;"></div>
             </div>
             <label>★</label>
           </div>
@@ -104,6 +134,50 @@
     </section>
 
   </main>
+
+   <!-- ===== FOOTER ===== -->
+  <footer id="footer" role="contentinfo" aria-label="Footer">
+    <div class="footer-content">
+      <div id="product"> 
+        <h3>Product</h3>
+        <ul>
+          <li><a href="#">iOS App</a></li>
+          <li><a href="#">Android App</a></li>
+          <li><a href="#">How It Works</a></li>
+        </ul>
+      </div>
+
+      <div id="company">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Blogs</a></li>
+        </ul>
+      </div>
+
+      <div id="community">
+        <h3>Community</h3>
+        <ul>
+          <li><a href="#">Community Guidelines</a></li>
+          <li><a href="#">Contributing to L&amp;L</a></li>
+          <li><a href="#">Translate L&amp;L</a></li>
+        </ul>
+      </div>
+
+      <div id="support">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Report a Bug</a></li>
+          <li><a href="#">Request a Feature</a></li>
+        </ul>
+      </div>
+
+      <p> © 2025 Lawns &amp; Laundry · All Rights Reserved </p>
+         
+    </div>
+  </footer>
 
   <script src="script.js" defer></script>
 </body>
