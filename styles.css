@@ -1244,6 +1244,7 @@ select:focus-visible {
   overflow-y: auto;
   background: #433E8C;
   color: white;
+  z-index: 100;
 }
 
 /* Sidebar 1 (leftmost) */
