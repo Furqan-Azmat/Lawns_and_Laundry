@@ -231,6 +231,38 @@ body {
   margin-right: 1rem;
 }
 
+/* Custom tooltip styling for navigation icons */
+.icon-chip.square[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  bottom: -3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.125rem;
+  white-space: nowrap;
+  z-index: 1001;
+  pointer-events: none;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.icon-chip.square[title]:hover::before {
+  content: '';
+  position: absolute;
+  bottom: -0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 0.5rem solid transparent;
+  border-right: 0.5rem solid transparent;
+  border-bottom: 0.5rem solid rgba(0, 0, 0, 0.9);
+  z-index: 1001;
+  pointer-events: none;
+}
+
 
 /* ===== Main Content ===== */
 main {
