@@ -3,33 +3,41 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FAQ | Lawns & Laundry</title>
+  <title>Contact Us | Lawns & Laundry</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
-    .faq-section {
+    .contact-section {
       max-width: 900px;
       margin: 3rem auto;
       padding: 0 1rem;
     }
-    .faq-list {
-      margin-top: 2rem;
-    }
-    .faq-item {
-      background: #f9f9f9;
-      padding: 1rem 1.5rem;
-      margin-bottom: 1rem;
-      border-radius: 0.5rem;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    }
-    .faq-item h2 {
-      margin: 0 0 0.5rem 0;
-      font-size: 1.2rem;
+    .contact-section h1 {
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
       color: #333;
     }
-    .faq-item p {
-      margin: 0;
+    .contact-section textarea {
+      width: 100%;
+      min-height: 300px;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      border: 1px solid #ccc;
       font-size: 1rem;
-      color: #555;
+      box-sizing: border-box;
+      margin-bottom: 1rem;
+      resize: vertical;
+    }
+    .contact-section button {
+      padding: 0.75rem 1.5rem;
+      background-color: green;
+      color: white;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .contact-section button:hover {
+      background-color: darkgreen;
     }
   </style>
 </head>
@@ -69,24 +77,12 @@
   </header>
 
   <main id="main" class="quest-page" tabindex="-1">
-    <section class="faq-section">
+    <section class="contact-section">
       <header class="board-header">
-        <h1>Frequently Asked Questions</h1>
+        <h1>Contact Us</h1>
       </header>
-      <div class="faq-list">
-        <div class="faq-item">
-          <h2>How can I apply for a quest?</h2>
-          <p>View available quests on the Quest Board and select a task.</p>
-        </div>
-        <div class="faq-item">
-          <h2>How do I contact a quest poster?</h2>
-          <p>Click the "Message" button on the quest detail panel to send a direct message.</p>
-        </div>
-        <div class="faq-item">
-          <h2>How do I edit my profile?</h2>
-          <p>Use the Profile menu to update your information.</p>
-        </div>
-      </div>
+      <textarea placeholder="Write your message here..."></textarea>
+      <button>Submit</button>
     </section>
   </main>
 
@@ -103,7 +99,7 @@
       <div id="company">
         <h3>Company</h3>
         <ul>
-          <li><a href="contact.html">Contact Us</a></li>
+          <li><a href="#">Contact Us</a></li>
           <li><a href="#">News</a></li>
           <li><a href="#">Blogs</a></li>
         </ul>
