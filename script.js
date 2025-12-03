@@ -175,7 +175,7 @@ function setupQuestViewCTA() {
   if (accountBtn) {
     accountBtn.addEventListener("click", () => {
       closeMenu();
-      window.location.href = "Accounts.html"; 
+      window.location.href = "accountSummary.html"; 
     });
   }
 
