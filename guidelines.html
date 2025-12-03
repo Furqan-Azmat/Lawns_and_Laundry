@@ -3,41 +3,38 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Request a Feature | Lawns & Laundry</title>
+  <title>Community Guidelines | Lawns & Laundry</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
-    .feature-section {
-      max-width: 1200px;
+    .guidelines-section {
+      max-width: 900px;
       margin: 3rem auto;
       padding: 0 1rem;
     }
-    .feature-section h1 {
+    .guidelines-section h1 {
       margin-bottom: 1.5rem;
       font-size: 1.8rem;
       color: #333;
     }
-    .feature-section textarea {
-      width: 100%;
-      min-height: 400px;
-      padding: 1rem;
-      border-radius: 0.5rem;
-      border: 1px solid #ccc;
-      font-size: 1rem;
-      resize: vertical;
-      box-sizing: border-box;
+    .guidelines-list {
+      margin-top: 2rem;
+    }
+    .guideline-item {
+      background: #f9f9f9;
+      padding: 1rem 1.5rem;
       margin-bottom: 1rem;
-    }
-    .feature-section button {
-      padding: 0.75rem 1.5rem;
-      background-color: green;
-      color: white;
-      border: none;
       border-radius: 0.5rem;
-      cursor: pointer;
-      font-size: 1rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     }
-    .feature-section button:hover {
-      background-color: darkgreen;
+    .guideline-item h2 {
+      margin: 0 0 0.5rem 0;
+      font-size: 1.2rem;
+      color: #333;
+    }
+    .guideline-item p {
+      margin: 0;
+      font-size: 1rem;
+      color: #555;
     }
   </style>
 </head>
@@ -76,10 +73,30 @@
     </div>
   </header>
 
-  <main id="main" class="feature-section" tabindex="1">
-    <h1>Request a Feature</h1>
-    <textarea id="featureRequest" placeholder="Describe the feature you’d like to see..."></textarea>
-    <button id="submitFeature">Submit</button>
+  <main id="main" class="quest-page" tabindex="-1">
+    <section class="guidelines-section">
+      <header class="board-header">
+        <h1>Community Guidelines</h1>
+      </header>
+      <div class="guidelines-list">
+        <div class="guideline-item">
+          <h2>Be Respectful</h2>
+          <p>Treat other users with kindness and respect. Harassment or hate speech will not be tolerated.</p>
+        </div>
+        <div class="guideline-item">
+          <h2>Post Accurate Information</h2>
+          <p>Ensure that any information you provide is accurate and honest to maintain trust in the community.</p>
+        </div>
+        <div class="guideline-item">
+          <h2>No Spam</h2>
+          <p>Do not post irrelevant or repetitive content. Keep posts relevant to the platform’s purpose.</p>
+        </div>
+        <div class="guideline-item">
+          <h2>Report Issues</h2>
+          <p>If you encounter any issues or violations, use the "Report a Bug" or "Contact Us" tools to notify the team.</p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer id="footer" role="contentinfo" aria-label="Footer">
@@ -103,7 +120,7 @@
       <div id="community">
         <h3>Community</h3>
         <ul>
-          <li><a href="#">Community Guidelines</a></li>
+          <li><a href="guidelines.html">Guidelines</a></li>
           <li><a href="#">Contributing to L&amp;L</a></li>
           <li><a href="#">Translate L&amp;L</a></li>
         </ul>
