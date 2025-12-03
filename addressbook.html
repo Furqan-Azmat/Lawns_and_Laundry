@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Address Book | Lawns & Laundry</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+        .contact-card {
+            background: #f9f9f9;
+            border-radius: 0.75rem;
+            padding: 1rem 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .contact-card h4 {
+            margin: 0 0 0.25rem 0;
+        }
+        .contact-card p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #555;
+        }
+        .add-contact-section {
+            margin-top: 2rem;
+        }
+        .add-contact-section textarea {
+            width: 100%;
+            min-height: 150px;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            margin-bottom: 1rem;
+            resize: vertical;
+        }
+        .add-contact-section button {
+            padding: 0.75rem 1.5rem;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+        }
+        .add-contact-section button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="banner_top" role="banner" aria-label="Top navigation">
+        <a class="skip-link" href="#main">Skip to content</a>
+
+        <div id="logo" aria-label="Site logo">
+            <img id="img_logo" src="images/LawnsLogoPlaceholder.png" alt="Lawns & Laundry logo" />
+        </div>
+
+        <p id="website_name" aria-label="Website name">Lawns & Laundry</p>
+
+        <nav aria-label="Primary">
+            <a href="index.html" class="btn" data-nav>Home</a>
+            <a href="services.html" class="btn" data-nav>Services</a>
+            <a href="login.html" id="login_link" class="btn" data-nav>Login</a>
+        </nav>
+    </header>
+
+    <div class="settings-layout">
+
+        <aside class="settings-sidebar" aria-label="Navigation">
+            <div class="settings-avatar">
+                <img src="images/placeholder.png" alt="User avatar" />
+            </div>
+
+            <h1 class="settings-heading">My Account</h1>
+
+            <nav class="settings-nav">
+                <a href="accounts.html" class="settings-nav-item">
+                    <span>Account Summary</span>
+                </a>
+                <a href="settings.html" class="settings-nav-item">
+                    <span>Account Settings</span>
+                </a>
+                <a href="addressbook.html" class="settings-nav-item is-active">
+                    <span>Address Book</span>
+                </a>
+                <a href="logout.html" class="settings-nav-item">
+                    <span>Sign Out</span>
+                </a>
+            </nav>
+        </aside>
+
+        <main class="main-content" id="main">
+            <section class="card account-profile-card" aria-label="Address Book">
+
+                <header class="account-profile-header">
+                    <h2>My Contacts</h2>
+                </header>
+
+                <section class="account-profile-section">
+                    <div class="contact-card">
+                        <h4>Jane Doe</h4>
+                        <p>Email: jane@example.com</p>
+                        <p>Phone: (555) 123-4567</p>
+                    </div>
+                    <div class="contact-card">
+                        <h4>Bob Smith</h4>
+                        <p>Email: bob@example.com</p>
+                        <p>Phone: (555) 6757-6543</p>
+                    </div>
+                    <div class="contact-card">
+                        <h4>Alice Alice</h4>
+                        <p>Email: alice@example.com</p>
+                        <p>Phone: (111) 111-7890</p>
+                    </div>
+                </section>
+
+                <section class="add-contact-section">
+                    <h3>Add New Contact</h3>
+                    <textarea placeholder="Enter name, email, phone..."></textarea>
+                    <button>Submit</button>
+                </section>
+
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
