@@ -7,11 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Quest Giver | Lawns & Laundry</title>
     <link rel="stylesheet" href="styles.css" />
+       <style>
+        /* Added - Completed badge styling */
+        .completed-badge{
+            background:#4CAF50;
+            color:white;
+            padding:4px 10px;
+            border-radius:8px;
+            font-size:0.85rem;
+            font-weight:600;
+            margin-left:10px;
+        }
+    </style>
 </head>
 
 <body>
 
-          <!-- ===== HEADER NAVIGATION ===== -->
+          <!-- ===== HEADER NAVIGATION===== -->
   <header id="banner_top" role="banner" aria-label="Top navigation">
     <!-- Skip Link for Accessibility -->
     <a class="skip-link" href="#main">Skip to content</a>
@@ -19,7 +31,7 @@
     <!-- Logo -->
     <a href="index.html" id="logo" aria-label="Site logo"><img id="img_logo" src="images/icons/lawns&Laundry-logo.png" alt="Lawns &amp; Laundry logo" /></a>
     
-    <!-- Main Navigation Buttons (Centered) -->
+    <!-- Main Navigation Buttons(Centered) -->
     <nav class="quest-nav" aria-label="Primary">
       <a href="adventurerAccepted.html" class="icon-chip square book-icon" title="Profile Hub" aria-label="Profile Hub" style="background-color: #B8B5E5; border-color: #B8B5E5;">
         <img src="images/icons/book icon.png" alt="Profile Hub" />
@@ -82,86 +94,94 @@
       </div>
     </div>
 
-    <main id="main" class="hub-layout" tabindex="-1">
-        <section class="quest-listing" aria-label="Quest Giver Hub">
-            <div class="quest-card">
-                <article class="quest-item">
-                    <header class="detail-header">
-                        <h2>Mow my lawn</h2>
-                        <div class="detail-tags">
-                            <span class="pill">Today</span>
-                            <span class="pill">2 hrs</span>
-                        </div>
-                    </header>
-                    <p class="detail-desc">Front and back yard need a trim and edge. Access to equipment provided.</p>
-                    <div class="detail-meta">
-                        <div>
-                            <p class="eyebrow">Difficulty</p>
-                            <div class="difficulty">
-                                <span class="dot green"></span>
-                                <span class="dot green"></span>
-                                <span class="dot gray"></span>
-                            </div>
-                        </div>
-                        <div>
-                            <p class="eyebrow">Reward</p>
-                            <p class="reward-amount">$45</p>
-                        </div>
-                    </div>
-                </article>
+   <main id="main" class="hub-layout" tabindex="-1">
+    <section class="quest-listing" aria-label="Quest Giver Hub">
+        <div class="quest-card">
 
-                <article class="quest-item">
-                    <header class="detail-header">
-                        <h2>Carry my groceries</h2>
-                        <div class="detail-tags">
-                            <span class="pill">Today</span>
-                            <span class="pill">30 mins</span>
-                        </div>
-                    </header>
-                    <p class="detail-desc">Need 3 bags of groceries carried from the convenience store to my home.</p>
-                    <div class="detail-meta">
-                        <div>
-                            <p class="eyebrow">Difficulty</p>
-                            <div class="difficulty">
-                                <span class="dot green"></span>
-                                <span class="dot gray"></span>
-                                <span class="dot gray"></span>
-                            </div>
-                        </div>
-                        <div>
-                            <p class="eyebrow">Reward</p>
-                            <p class="reward-amount">$10</p>
+            <!-- QUEST 1 -->
+            <article class="quest-item">
+                <header class="detail-header">
+                    <h2>Mow my lawn</h2>
+                    <span class="completed-badge">✔ Completed</span>
+                    <div class="detail-tags">
+                        <span class="pill">Today</span>
+                        <span class="pill">2 hrs</span>
+                    </div>
+                </header>
+                <p class="detail-desc">Front and back yard need a trim and edge. Access to equipment provided.</p>
+                <div class="detail-meta">
+                    <div>
+                        <p class="eyebrow">Difficulty</p>
+                        <div class="difficulty">
+                            <span class="dot green"></span>
+                            <span class="dot green"></span>
+                            <span class="dot gray"></span>
                         </div>
                     </div>
-                </article>
+                    <div>
+                        <p class="eyebrow">Reward</p>
+                        <p class="reward-amount">$45</p>
+                    </div>
+                </div>
+            </article>
 
-                <article class="quest-item">
-                    <header class="detail-header">
-                        <h2>Shovel snow off my roof</h2>
-                        <div class="detail-tags">
-                            <span class="pill">Today</span>
-                            <span class="pill">1 hour</span>
-                        </div>
-                    </header>
-                    <p class="detail-desc">My house's roof needs to be cleared of all snow.</p>
-                    <div class="detail-meta">
-                        <div>
-                            <p class="eyebrow">Difficulty</p>
-                            <div class="difficulty">
-                                <span class="dot green"></span>
-                                <span class="dot green"></span>
-                                <span class="dot green"></span>
-                            </div>
-                        </div>
-                        <div>
-                            <p class="eyebrow">Reward</p>
-                            <p class="reward-amount">$90</p>
+            <!-- QUEST 2 -->
+            <article class="quest-item">
+                <header class="detail-header">
+                    <h2>Carry my groceries</h2>
+                    <span class="completed-badge">✔ Completed</span>
+                    <div class="detail-tags">
+                        <span class="pill">Today</span>
+                        <span class="pill">30 mins</span>
+                    </div>
+                </header>
+                <p class="detail-desc">Need 3 bags of groceries carried from the convenience store to my home.</p>
+                <div class="detail-meta">
+                    <div>
+                        <p class="eyebrow">Difficulty</p>
+                        <div class="difficulty">
+                            <span class="dot green"></span>
+                            <span class="dot gray"></span>
+                            <span class="dot gray"></span>
                         </div>
                     </div>
-                </article>
-            </div>
-        </section>
-    </main>
+                    <div>
+                        <p class="eyebrow">Reward</p>
+                        <p class="reward-amount">$10</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- QUEST 3 -->
+            <article class="quest-item">
+                <header class="detail-header">
+                    <h2>Shovel snow off my roof</h2>
+                    <span class="completed-badge">✔ Completed</span>
+                    <div class="detail-tags">
+                        <span class="pill">Today</span>
+                        <span class="pill">1 hour</span>
+                    </div>
+                </header>
+                <p class="detail-desc">My house's roof needs to be cleared of all snow.</p>
+                <div class="detail-meta">
+                    <div>
+                        <p class="eyebrow">Difficulty</p>
+                        <div class="difficulty">
+                            <span class="dot green"></span>
+                            <span class="dot green"></span>
+                            <span class="dot green"></span>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="eyebrow">Reward</p>
+                        <p class="reward-amount">$90</p>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+</main>
 
 
          <!-- Footer -->
