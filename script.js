@@ -150,15 +150,12 @@
    * Redirect to Quest Giver Profile from Quest View Page when you click "You" button.
    */
 function setupQuestViewCTA() {
-  // Only run on the quest view page where the profile menu exists.
-  const questPage = document.querySelector(".quest-page");
-  if (!questPage) return;
-
-  const profileBtn = document.getElementById("questProfileBtn");
-  const profileMenu = document.getElementById("questProfileMenu");
-  const accountBtn = document.getElementById("questProfileAccount");
-  const settingsBtn = document.getElementById("questProfileSettings");
-  const signoutBtn = document.getElementById("questProfileSignout");
+  // Find any profile button and menu on the page (works with different ID patterns)
+  const profileBtn = document.querySelector('[id$="ProfileBtn"]');
+  const profileMenu = document.querySelector('[id$="ProfileMenu"]');
+  const accountBtn = document.querySelector('[id$="ProfileAccount"]');
+  const settingsBtn = document.querySelector('[id$="ProfileSettings"]');
+  const signoutBtn = document.querySelector('[id$="ProfileSignout"]');
 
   if (!profileBtn || !profileMenu) return;
 
@@ -297,7 +294,21 @@ setupQuestViewCTA();
 
       // --- Simulated Post Success ---
       form.reset(); // Clear the form fields.
-      showMessage(form, "Quest submitted successfully!", "success");
+      
+      // Show success message with animated checkmark
+      const checkmark = document.getElementById('successCheckmark');
+      if (checkmark) {
+        checkmark.style.display = 'inline-block';
+        showMessage(form, "Quest submitted successfully!", "success");
+        
+        // Prepend checkmark to the success message
+        const messageElement = form.querySelector('.success');
+        if (messageElement) {
+          messageElement.insertBefore(checkmark, messageElement.firstChild);
+        }
+      } else {
+        showMessage(form, "Quest submitted successfully!", "success");
+      }
     });
   }
 
