@@ -2353,7 +2353,7 @@ main {
   display: flex;
   align-items: flex-start;
   gap: 3rem;
-  padding: 8.75rem 3rem 3rem;  /* top padding = header height + a bit */
+  padding: 140px 3rem 3rem;  /* top padding = header height + a bit */
 }
 
 .settings-avatar {
@@ -4021,17 +4021,23 @@ main {
   padding: 140px 3rem 3rem;
 }
 
+/* Main content container for accounts/settings pages - sets max width */
+.settings-layout .main-content {
+  flex: 1;
+  max-width: 78%; /* Wider max-width for account pages */
+  padding-top: 0.5rem;
+}
+
 .main-content {
   flex: 1;
   max-width: 900px;
 }
 
-
+/* Card box containing account/address book content - full width within container */
 .account-profile-card {
-  width: min(900px, 100%);
+  width: 100%; /* Full width to expand within main-content container */
   padding: 2.25rem 2.5rem 2.75rem;
   border-radius: 1.5rem;
-   margin: -10rem;  
 }
 
 .account-profile-header {
@@ -4087,6 +4093,23 @@ main {
   color: #6b7280;
 }
 
+.account-input {
+  width: 100%;
+  padding: 1rem 1.25rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.9rem;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 120px;
+}
+
+.account-input:focus {
+  outline: none;
+  border-color: #6c59d4;
+  box-shadow: 0 0 0 3px rgba(108, 89, 212, 0.1);
+}
+
 .account-profile-box {
   background: #f9fafb;
   border: 1px dashed #cbd5e1;
@@ -4128,6 +4151,13 @@ main {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  flex-shrink: 0;
+}
+
+.account-profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 
@@ -4138,9 +4168,119 @@ main {
     border-radius: 0.8rem;
 }
 
+.add-photo-btn {
+    margin-top: 0.5rem;
+}
+
+.contact-card {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.9rem;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-card h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.2rem;
+    color: #1f2937;
+}
+
+.contact-card p {
+    margin: 0.25rem 0;
+    font-size: 0.95rem;
+    color: #6b7280;
+}
+
+.settings-toggle {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #e5e7eb;
+    cursor: pointer;
+}
+
+.settings-toggle:last-child {
+    border-bottom: none;
+}
+
+.settings-toggle input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.settings-toggle span {
+    font-size: 1rem;
+    color: #1f2937;
+}
+
+.summary-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.stat-card {
+    background: linear-gradient(135deg, #6c59d4 0%, #8b7ae6 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 0.9rem;
+    text-align: center;
+}
+
+.stat-card h4 {
+    margin: 0 0 1rem 0;
+    font-size: 1rem;
+    font-weight: 500;
+    opacity: 0.95;
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1;
+}
+
+.stat-label {
+    margin: 0.5rem 0 0 0;
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+.account-info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.info-item {
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.9rem;
+    padding: 1.25rem;
+}
+
+.info-label {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.9rem;
+    color: #6b7280;
+    font-weight: 500;
+}
+
+.info-value {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #1f2937;
+    font-weight: 600;
+}
 
 .settings-layout .account-profile-card {
-  margin: -4rem 0 0 0;   
+  margin: 0;
 }
 
 

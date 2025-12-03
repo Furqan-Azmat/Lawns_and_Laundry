@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Account Summary | Lawns & Laundry</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <!-- Header / Banner -->
+    <header id="banner_top" role="banner" aria-label="Top navigation">
+        <a class="skip-link" href="#main">Skip to content</a>
+        
+        <!-- Logo -->
+        <a href="index.html" id="logo" aria-label="Site logo">
+            <img id="img_logo" src="images/icons/lawns&Laundry-logo.png" alt="Lawns & Laundry logo" />
+        </a>
+        
+        <!-- Main Navigation Buttons (Centered) -->
+        <nav class="quest-nav" aria-label="Primary">
+            <a href="adventurerAccepted.html" class="icon-chip square book-icon" title="Profile Hub" aria-label="Profile Hub">
+                <img src="images/icons/book icon.png" alt="Profile Hub" />
+            </a>
+            <a href="questBoard.html" class="icon-chip square" title="Quest Board" aria-label="Quest Board">
+                <img src="images/icons/sword icon.png" alt="Quest Board" />
+            </a>
+            <a href="guild.html" class="icon-chip square" title="Guild Association" aria-label="Guild">
+                <img src="images/icons/guild icon.png" alt="Guild" />
+            </a>
+        </nav>
+        
+        <!-- Right Side Navigation -->
+        <div class="nav-right">
+            <!-- Notifications Bell -->
+            <a href="messages.html" class="icon-chip" aria-label="Notifications">
+                <img src="images/icons/bell icon.png" alt="Notifications">
+                <span class="badge">3</span>
+            </a>
+            <!-- Profile Menu -->
+            <div class="profile-menu-wrapper">
+                <button class="icon-chip" id="summaryProfileBtn" aria-label="Profile">
+                    <img src="images/icons/profile icon.png" alt="Profile">
+                </button>
+                <div class="profile-menu" id="summaryProfileMenu" role="menu" aria-label="Profile options">
+                    <button id="summaryProfileAccount" role="menuitem">Your Account</button>
+                    <button id="summaryProfileSettings" role="menuitem">Settings</button>
+                    <button id="summaryProfileSignout" role="menuitem">Sign Out</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Accounts layout: left menu + right content -->
+    <div class="settings-layout">
+
+        <!-- Left My Account menu -->
+        <aside class="settings-sidebar" aria-label="My account navigation">
+            <div class="settings-avatar">
+                <img src="images/icons/profile icon.png" alt="User avatar" />
+            </div>
+
+            <h1 class="settings-heading">My Account</h1>
+
+            <nav class="settings-nav">
+                <!-- Active section -->
+                <a href="accountSummary.html" class="settings-nav-item is-active">
+                    <span>Account Summary</span>
+                </a>
+
+                <a href="settings.html" class="settings-nav-item">
+                    <span>Account Settings</span>
+                </a>
+
+                <a href="accounts.html" class="settings-nav-item">
+                    <span>My Profile</span>
+                </a>
+
+                <a href="addressbook.html" class="settings-nav-item">
+                    <span>Address Book</span>
+                </a>
+
+                <a href="emailpref.html" class="settings-nav-item">
+                    <span>Email Preferences</span>
+                </a>
+
+                <a href="index.html" class="settings-nav-item">
+                    <span>Sign Out</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Right side: Account Summary content -->
+        <main class="main-content" id="main">
+            <section class="card account-profile-card" aria-label="Account summary">
+
+                <header class="account-profile-header">
+                    <h2 class="account-profile-name">Account Summary</h2>
+                </header>
+                
+                <p class="account-profile-helper" style="margin-bottom: 2rem;">
+                    Overview of your Lawns & Laundry activity and statistics.
+                </p>
+
+                <!-- Account Stats -->
+                <section class="account-profile-section">
+                    <h3>Your Activity</h3>
+                    <p class="account-profile-helper">Track your progress as both an Adventurer and Quest Giver.</p>
+                    
+                    <div class="summary-stats">
+                        <div class="stat-card">
+                            <h4>Total Quests Completed</h4>
+                            <p class="stat-number">24</p>
+                            <p class="stat-label">As Adventurer</p>
+                        </div>
+                        <div class="stat-card">
+                            <h4>Quests Posted</h4>
+                            <p class="stat-number">12</p>
+                            <p class="stat-label">As Quest Giver</p>
+                        </div>
+                        <div class="stat-card">
+                            <h4>Total Earnings</h4>
+                            <p class="stat-number">$1,240</p>
+                            <p class="stat-label">This month</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Recent Activity -->
+                <section class="account-profile-section">
+                    <h3>Recent Activity</h3>
+                    <p class="account-profile-helper">Your latest quest activity.</p>
+                    
+                    <div class="contact-card">
+                        <h4>Lawn Mowing - Completed</h4>
+                        <p><strong>Date:</strong> December 1, 2025</p>
+                        <p><strong>Earned:</strong> $45</p>
+                        <p><strong>Rating:</strong> ⭐⭐⭐⭐⭐</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <h4>Grocery Delivery - Completed</h4>
+                        <p><strong>Date:</strong> November 28, 2025</p>
+                        <p><strong>Earned:</strong> $25</p>
+                        <p><strong>Rating:</strong> ⭐⭐⭐⭐⭐</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <h4>Snow Shoveling - Posted</h4>
+                        <p><strong>Date:</strong> November 25, 2025</p>
+                        <p><strong>Status:</strong> Awaiting acceptance</p>
+                        <p><strong>Budget:</strong> $60</p>
+                    </div>
+                </section>
+
+                <!-- Account Information -->
+                <section class="account-profile-section">
+                    <h3>Account Details</h3>
+                    <p class="account-profile-helper">Basic account information.</p>
+                    
+                    <div class="account-info-grid">
+                        <div class="info-item">
+                            <p class="info-label">Member Since</p>
+                            <p class="info-value">January 2024</p>
+                        </div>
+                        <div class="info-item">
+                            <p class="info-label">Account Type</p>
+                            <p class="info-value">Adventurer & Quest Giver</p>
+                        </div>
+                        <div class="info-item">
+                            <p class="info-label">Verification Status</p>
+                            <p class="info-value">✓ Verified</p>
+                        </div>
+                        <div class="info-item">
+                            <p class="info-label">Average Rating</p>
+                            <p class="info-value">4.9 / 5.0</p>
+                        </div>
+                    </div>
+                </section>
+
+            </section>
+        </main>
+
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>

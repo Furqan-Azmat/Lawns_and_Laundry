@@ -13,18 +13,44 @@
     <!-- Header / Banner -->
     <header id="banner_top" role="banner" aria-label="Top navigation">
         <a class="skip-link" href="#main">Skip to content</a>
-
-        <div id="logo" aria-label="Site logo">
-            <img id="img_logo" src="images/LawnsLogoPlaceholder.png" alt="Lawns & Laundry logo" />
-        </div>
-
-        <p id="website_name" aria-label="Website name">Lawns & Laundry</p>
-
-        <nav aria-label="Primary">
-            <a href="index.html" class="btn" data-nav>Home</a>
-            <a href="services.html" class="btn" data-nav>Services</a>
-            <a href="login.html" id="login_link" class="btn" data-nav>Login</a>
+        
+        <!-- Logo -->
+        <a href="index.html" id="logo" aria-label="Site logo">
+            <img id="img_logo" src="images/icons/lawns&Laundry-logo.png" alt="Lawns & Laundry logo" />
+        </a>
+        
+        <!-- Main Navigation Buttons (Centered) -->
+        <nav class="quest-nav" aria-label="Primary">
+            <a href="adventurerAccepted.html" class="icon-chip square book-icon" title="Profile Hub" aria-label="Profile Hub">
+                <img src="images/icons/book icon.png" alt="Profile Hub" />
+            </a>
+            <a href="questBoard.html" class="icon-chip square" title="Quest Board" aria-label="Quest Board">
+                <img src="images/icons/sword icon.png" alt="Quest Board" />
+            </a>
+            <a href="guild.html" class="icon-chip square" title="Guild Association" aria-label="Guild">
+                <img src="images/icons/guild icon.png" alt="Guild" />
+            </a>
         </nav>
+        
+        <!-- Right Side Navigation -->
+        <div class="nav-right">
+            <!-- Notifications Bell -->
+            <a href="messages.html" class="icon-chip" aria-label="Notifications">
+                <img src="images/icons/bell icon.png" alt="Notifications">
+                <span class="badge">3</span>
+            </a>
+            <!-- Profile Menu -->
+            <div class="profile-menu-wrapper">
+                <button class="icon-chip" id="emailProfileBtn" aria-label="Profile">
+                    <img src="images/icons/profile icon.png" alt="Profile">
+                </button>
+                <div class="profile-menu" id="emailProfileMenu" role="menu" aria-label="Profile options">
+                    <button id="emailProfileAccount" role="menuitem">Your Account</button>
+                    <button id="emailProfileSettings" role="menuitem">Settings</button>
+                    <button id="emailProfileSignout" role="menuitem">Sign Out</button>
+                </div>
+            </div>
+        </div>
     </header>
 
     <!-- Layout -->
@@ -33,13 +59,13 @@
         <!-- Left Account Sidebar -->
         <aside class="settings-sidebar" aria-label="My account navigation">
             <div class="settings-avatar">
-                <img src="images/placeholder.png" alt="User avatar" />
+                <img src="images/icons/profile icon.png" alt="User avatar" />
             </div>
 
             <h1 class="settings-heading">My Account</h1>
 
             <nav class="settings-nav">
-                <a href="accounts.html" class="settings-nav-item">
+                <a href="accountSummary.html" class="settings-nav-item">
                     <span>Account Summary</span>
                 </a>
 
@@ -56,11 +82,11 @@
                 </a>
 
                 <!-- ACTIVE PAGE -->
-                <a href="email-preferences.html" class="settings-nav-item is-active">
+                <a href="emailpref.html" class="settings-nav-item is-active">
                     <span>Email Preferences</span>
                 </a>
 
-                <a href="logout.html" class="settings-nav-item">
+                <a href="index.html" class="settings-nav-item">
                     <span>Sign Out</span>
                 </a>
             </nav>
@@ -72,32 +98,38 @@
             <section class="card account-profile-card" aria-label="Email Preferences">
 
                 <header class="account-profile-header">
-                    <div class="account-profile-identity">
-                        <h2 class="account-profile-name">Email Preferences</h2>
-                        <p class="account-profile-helper">
-                            Customize Email settings
-                        </p>
-                    </div>
+                    <h2 class="account-profile-name">Email Preferences</h2>
                 </header>
+                
+                <p class="account-profile-helper" style="margin-bottom: 2rem;">
+                    Manage how and when you receive emails from Lawns & Laundry.
+                </p>
 
                 <!-- Email Preference Items -->
                 <section class="account-profile-section">
-                    <h3>Notifications</h3>
+                    <h3>Quest & Activity Updates</h3>
+                    <p class="account-profile-helper">Stay informed about your quest activity.</p>
 
                     <label class="settings-toggle">
                         <input type="checkbox" checked>
-                        <span>Messages</span>
+                        <span>Quest accepted notifications</span>
                     </label>
 
                     <label class="settings-toggle">
                         <input type="checkbox" checked>
-                        <span>Email Notifications</span>
+                        <span>Quest completed notifications</span>
+                    </label>
+                    
+                    <label class="settings-toggle">
+                        <input type="checkbox" checked>
+                        <span>New messages</span>
                     </label>
 
                 </section>
 
                 <section class="account-profile-section">
-                    <h3>Account Emails</h3>
+                    <h3>Account & Security</h3>
+                    <p class="account-profile-helper">Important updates about your account.</p>
 
                     <label class="settings-toggle">
                         <input type="checkbox" checked>
@@ -107,6 +139,31 @@
                     <label class="settings-toggle">
                         <input type="checkbox" checked>
                         <span>Security alerts</span>
+                    </label>
+                    
+                    <label class="settings-toggle">
+                        <input type="checkbox">
+                        <span>Login from new device</span>
+                    </label>
+                </section>
+                
+                <section class="account-profile-section">
+                    <h3>Marketing & Updates</h3>
+                    <p class="account-profile-helper">News, tips, and special offers.</p>
+
+                    <label class="settings-toggle">
+                        <input type="checkbox" checked>
+                        <span>Weekly newsletter</span>
+                    </label>
+
+                    <label class="settings-toggle">
+                        <input type="checkbox">
+                        <span>Promotional emails</span>
+                    </label>
+                    
+                    <label class="settings-toggle">
+                        <input type="checkbox" checked>
+                        <span>Product updates</span>
                     </label>
                 </section>
 
@@ -120,6 +177,7 @@
         </main>
     </div>
 
+    <script src="script.js" defer></script>
 </body>
 
 </html>

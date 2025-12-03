@@ -13,18 +13,44 @@
     <!-- Header / Banner -->
     <header id="banner_top" role="banner" aria-label="Top navigation">
         <a class="skip-link" href="#main">Skip to content</a>
-
-        <div id="logo" aria-label="Site logo">
-            <img id="img_logo" src="images/LawnsLogoPlaceholder.png" alt="Lawns & Laundry logo" />
-        </div>
-
-        <p id="website_name" aria-label="Website name">Lawns & Laundry</p>
-
-        <nav aria-label="Primary">
-            <a href="index.html" class="btn" data-nav>Home</a>
-            <a href="services.html" class="btn" data-nav>Services</a>
-            <a href="login.html" id="login_link" class="btn" data-nav>Login</a>
+        
+        <!-- Logo -->
+        <a href="index.html" id="logo" aria-label="Site logo">
+            <img id="img_logo" src="images/icons/lawns&Laundry-logo.png" alt="Lawns & Laundry logo" />
+        </a>
+        
+        <!-- Main Navigation Buttons (Centered) -->
+        <nav class="quest-nav" aria-label="Primary">
+            <a href="adventurerAccepted.html" class="icon-chip square book-icon" title="Profile Hub" aria-label="Profile Hub">
+                <img src="images/icons/book icon.png" alt="Profile Hub" />
+            </a>
+            <a href="questBoard.html" class="icon-chip square" title="Quest Board" aria-label="Quest Board">
+                <img src="images/icons/sword icon.png" alt="Quest Board" />
+            </a>
+            <a href="guild.html" class="icon-chip square" title="Guild Association" aria-label="Guild">
+                <img src="images/icons/guild icon.png" alt="Guild" />
+            </a>
         </nav>
+        
+        <!-- Right Side Navigation -->
+        <div class="nav-right">
+            <!-- Notifications Bell -->
+            <a href="messages.html" class="icon-chip" aria-label="Notifications">
+                <img src="images/icons/bell icon.png" alt="Notifications">
+                <span class="badge">3</span>
+            </a>
+            <!-- Profile Menu -->
+            <div class="profile-menu-wrapper">
+                <button class="icon-chip" id="accountProfileBtn" aria-label="Profile">
+                    <img src="images/icons/profile icon.png" alt="Profile">
+                </button>
+                <div class="profile-menu" id="accountProfileMenu" role="menu" aria-label="Profile options">
+                    <button id="accountProfileAccount" role="menuitem">Your Account</button>
+                    <button id="accountProfileSettings" role="menuitem">Settings</button>
+                    <button id="accountProfileSignout" role="menuitem">Sign Out</button>
+                </div>
+            </div>
+        </div>
     </header>
 
     <!-- Accounts layout: left menu + right content -->
@@ -33,13 +59,13 @@
         <!-- Left My Account menu -->
         <aside class="settings-sidebar" aria-label="My account navigation">
             <div class="settings-avatar">
-                <img src="images/placeholder.png" alt="User avatar" />
+                <img src="images/icons/profile icon.png" alt="User avatar" />
             </div>
 
             <h1 class="settings-heading">My Account</h1>
 
             <nav class="settings-nav">
-                <a href="accounts.html" class="settings-nav-item">
+                <a href="accountSummary.html" class="settings-nav-item">
                     <span>Account Summary</span>
                 </a>
 
@@ -60,7 +86,7 @@
                     <span>Email Preferences</span>
                 </a>
 
-                <a href="logout.html" class="settings-nav-item">
+                <a href="index.html" class="settings-nav-item">
                     <span>Sign Out</span>
                 </a>
             </nav>
@@ -73,7 +99,7 @@
                 <!-- Top row: avatar + name + username + roles -->
                 <header class="account-profile-header">
                     <div class="account-profile-avatar">
-                        <img src="images/placeholder.png" alt="Profile photo"  style="width: 140px; height: 140px; object-fit: cover; border-radius: 1.25rem; display: block;" />
+                        <img src="images/icons/profile icon.png" alt="Profile photo" />
                     </div>
 
                     <div class="account-profile-identity">

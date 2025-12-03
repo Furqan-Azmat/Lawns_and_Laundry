@@ -190,7 +190,7 @@ function setupQuestViewCTA() {
     signoutBtn.addEventListener("click", () => {
       closeMenu();
       auth.logout();
-      window.location.href = routes.home;
+      window.location.href = "index.html";
     });
   }
 }
