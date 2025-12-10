@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quest Board | Lawns & Laundry</title>
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+</head>
+<body>
+  <!-- ===== HEADER NAVIGATION ===== -->
+  <header id="banner_top" role="banner" aria-label="Top navigation">
+    <!-- Skip Link for Accessibility -->
+    <a class="skip-link" href="#main">Skip to content</a>
+    
+    <!-- Logo -->
+    <a href="../../index.html" id="logo" aria-label="Site logo"><img id="img_logo" src="../../images/icons/lawns&Laundry-logo.png" alt="Lawns &amp; Laundry logo" /></a>
+    
+    <!-- Main Navigation Buttons (Centered) -->
+    <nav class="quest-nav" aria-label="Primary">
+      <a href="../adventurer/adventurerAccepted.html" class="icon-chip square book-icon" title="Profile Hub" aria-label="Profile Hub">
+        <img src="../../images/icons/book icon.png" alt="Profile Hub" />
+      </a>
+      <a href="../quests/questBoard.html" class="icon-chip square active" title="Quest Board" aria-label="Quest Board" style="background-color: #B8B5E5; border-color: #B8B5E5;">
+        <img src="../../images/icons/sword icon.png" alt="Quest Board" />
+      </a>
+      <a href="../quests/guild.html" class="icon-chip square" title="Guild Association" aria-label="Guild">
+        <img src="../../images/icons/guild icon.png" alt="Guild" />
+      </a>
+    </nav>
+    
+    <!-- Right Side Navigation -->
+    <div class="nav-right">
+      <!-- Notifications Bell -->
+      <a href="../dashboard/messages.html" class="icon-chip" aria-label="Notifications">
+        <img src="../../images/icons/bell icon.png" alt="Notifications">
+        <span class="badge">3</span>
+      </a>
+      <!-- Profile Menu -->
+      <div class="profile-menu-wrapper">
+        <button class="icon-chip" id="questProfileBtn" aria-label="Profile">
+          <img src="../../images/icons/profile icon.png" alt="Profile">
+        </button>
+        <div class="profile-menu" id="questProfileMenu" role="menu" aria-label="Profile options">
+          <button id="questProfileAccount" role="menuitem">Your Account</button>
+          <button id="questProfileSettings" role="menuitem">Settings</button>
+          <button id="questProfileSignout" role="menuitem">Sign Out</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main id="main" class="quest-page" tabindex="-1">
+
+    <!-- Location & Search Toolbar -->
+    <section class="quest-toolbar" aria-label="Location and search">
+      <!-- Current Location Display -->
+      <div class="location-chip">
+        <img src="../../images/icons/location icon.png" alt="" class="icon" />
+        <div>
+          <p class="eyebrow">Current location: <span class="title">Toronto, ON</span></p>
+        </div>
+      </div>
+      
+      <!-- Search Bar & Filter Button -->
+      <div class="search-group">
+        <label class="input-icon" aria-label="Search quests">
+          <img src="../../images/icons/search icon.png" alt="" class="icon" />
+          <input type="search" placeholder="Search" />
+        </label>
+        <button class="btn filter-btn" aria-label="Filter quests" style="background-color: white; width: 80px; height: 80px; max-width: 80px; max-height: 80px; padding: 0; overflow: visible; border: 1px solid var(--ring); border-radius: 0.9rem;">
+          <img src="../../images/icons/filter icon.png" alt="" style="width: 100px; height: 100px;" />
+        </button>
+      </div>
+    </section>
+
+    <!-- Quest Board Section -->
+    <section class="quest-board" aria-label="Quest board">
+      <header class="board-header">
+        <h1>Quest Board</h1>
+      </header>
+      <div class="board-content">
+        <!-- Quest List (Left Column) -->
+        <div class="quest-list" role="list">
+          <button class="quest-pill active" role="listitem">
+            <span class="quest-title">Mow my lawn</span>
+            <span class="reward tag">$</span>
+            <span class="difficulty" aria-label="Easy">
+              <span class="dot green"></span>
+              <span class="dot gray"></span>
+              <span class="dot gray"></span>
+            </span>
+          </button>
+          <button class="quest-pill" role="listitem">
+            <span class="quest-title">Grocery run</span>
+            <span class="reward tag">$$</span>
+            <span class="difficulty" aria-label="Medium">
+              <span class="dot yellow"></span>
+              <span class="dot yellow"></span>
+              <span class="dot gray"></span>
+            </span>
+          </button>
+          <button class="quest-pill" role="listitem">
+            <span class="quest-title">Shovel snow</span>
+            <span class="reward tag">$$$</span>
+            <span class="difficulty" aria-label="Hard">
+              <span class="dot red"></span>
+              <span class="dot red"></span>
+              <span class="dot red"></span>
+            </span>
+          </button>
+        </div>
+        
+        <!-- Vertical Divider -->
+        <div class="quest-divider" aria-hidden="true"></div>
+        
+        <!-- Quest Detail Panel (Right Column) -->
+        <div class="quest-detail" aria-live="polite">
+          <header class="detail-header">
+            <div>
+              <p class="eyebrow">Featured</p>
+              <h2>Mow my lawn</h2>
+            </div>
+            <div class="detail-tags">
+              <span class="pill">Today</span>
+              <span class="pill">2 hrs</span>
+            </div>
+          </header>
+          <p class="detail-desc">Front and back yard need a trim and edge. Access to equipment provided.</p>
+          <div class="detail-meta">
+            <div>
+              <p class="eyebrow">Difficulty</p>
+              <div class="difficulty">
+                <span class="dot green"></span>
+                <span class="dot gray"></span>
+                <span class="dot gray"></span>
+              </div>
+            </div>
+            <div>
+              <p class="eyebrow">Reward</p>
+              <p class="reward-amount">$45</p>
+            </div>
+          </div>
+          <div class="detail-actions">
+            <button class="btn">Accept</button>
+            <button class="btn btn-secondary" onclick = "window.location.href = '../dashboard/messages.html'">Message</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Post Quest Call-to-Action -->
+    <div class="post-cta">
+      <a class="btn wide" href="../questgiver/postquest.html">Post a new Quest</a>
+    </div>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer id="footer" role="contentinfo" aria-label="Footer">
+    <div class="footer-content">
+      <div id="product"> 
+        <h3>Product</h3>
+        <ul>
+          <li><a href="#">iOS App</a></li>
+          <li><a href="#">Android App</a></li>
+          <li><a href="#">How It Works</a></li>
+        </ul>
+      </div>
+
+      <div id="company">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="../support/contact.html">Contact Us</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Blogs</a></li>
+        </ul>
+      </div>
+
+      <div id="community">
+        <h3>Community</h3>
+        <ul>
+          <li><a href="#">Community Guidelines</a></li>
+          <li><a href="#">Contributing to L&amp;L</a></li>
+          <li><a href="#">Translate L&amp;L</a></li>
+        </ul>
+      </div>
+
+      <div id="support">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="../support/faq.html">FAQ</a></li>
+          <li><a href="../support/reportbug.html">Report a Bug</a></li>
+          <li><a href="../support/requestfeature.html">Request a Feature</a></li>
+        </ul>
+      </div>
+
+      <p> © 2025 Lawns &amp; Laundry · All Rights Reserved </p>
+         
+    </div>
+  </footer>
+
+  <script src="../../assets/js/script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Request a Feature | Lawns & Laundry</title>
+  <link rel="stylesheet" href="../../assets/css/styles.css" />
+  <style>
+    .feature-section {
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+    .feature-section h1 {
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+      color: #333;
+    }
+    .feature-section textarea {
+      width: 100%;
+      min-height: 400px;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      resize: vertical;
+      box-sizing: border-box;
+      margin-bottom: 1rem;
+    }
+    .feature-section button {
+      padding: 0.75rem 1.5rem;
+      background-color: green;
+      color: white;
+      border: none;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .feature-section button:hover {
+      background-color: darkgreen;
+    }
+  </style>
+</head>
+<body>
+  <header id="banner_top" role="banner" aria-label="Top navigation">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <a href="../../index.html" id="logo" aria-label="Site logo">
+      <img id="img_logo" src="../../images/icons/lawns&Laundry-logo.png" alt="Lawns &amp; Laundry logo" />
+    </a>
+    <nav class="quest-nav" aria-label="Primary">
+      <a href="../adventurer/adventurerAccepted.html" class="icon-chip square book-icon" title="Profile Hub" aria-label="Profile Hub">
+        <img src="../../images/icons/book icon.png" alt="Profile Hub" />
+      </a>
+      <a href="../quests/questBoard.html" class="icon-chip square" title="Quest Board" aria-label="Quest Board">
+        <img src="../../images/icons/sword icon.png" alt="Quest Board" />
+      </a>
+      <a href="../quests/guild.html" class="icon-chip square" title="Guild Association" aria-label="Guild">
+        <img src="../../images/icons/guild icon.png" alt="Guild" />
+      </a>
+    </nav>
+    <div class="nav-right">
+      <a href="../dashboard/messages.html" class="icon-chip" aria-label="Notifications">
+        <img src="../../images/icons/bell icon.png" alt="Notifications">
+        <span class="badge">3</span>
+      </a>
+      <div class="profile-menu-wrapper">
+        <button class="icon-chip" id="questProfileBtn" aria-label="Profile">
+          <img src="../../images/icons/profile icon.png" alt="Profile">
+        </button>
+        <div class="profile-menu" id="questProfileMenu" role="menu" aria-label="Profile options">
+          <button id="questProfileAccount" role="menuitem">Your Account</button>
+          <button id="questProfileSettings" role="menuitem">Settings</button>
+          <button id="questProfileSignout" role="menuitem">Sign Out</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="feature-section" tabindex="1">
+    <h1>Request a Feature</h1>
+    <textarea id="featureRequest" placeholder="Describe the feature you’d like to see..."></textarea>
+    <button id="submitFeature">Submit</button>
+  </main>
+
+  <footer id="footer" role="contentinfo" aria-label="Footer">
+    <div class="footer-content">
+      <div id="product"> 
+        <h3>Product</h3>
+        <ul>
+          <li><a href="#">iOS App</a></li>
+          <li><a href="#">Android App</a></li>
+          <li><a href="#">How It Works</a></li>
+        </ul>
+      </div>
+      <div id="company">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#">Blogs</a></li>
+        </ul>
+      </div>
+      <div id="community">
+        <h3>Community</h3>
+        <ul>
+          <li><a href="#">Community Guidelines</a></li>
+          <li><a href="#">Contributing to L&amp;L</a></li>
+          <li><a href="#">Translate L&amp;L</a></li>
+        </ul>
+      </div>
+      <div id="support">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="../support/faq.html">FAQ</a></li>
+          <li><a href="../support/reportbug.html">Report a Bug</a></li>
+          <li><a href="../support/requestfeature.html">Request a Feature</a></li>
+        </ul>
+      </div>
+      <p> © 2025 Lawns &amp; Laundry · All Rights Reserved </p>
+    </div>
+  </footer>
+</body>
+</html>
