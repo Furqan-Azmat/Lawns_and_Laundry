@@ -18,11 +18,11 @@
 
   // A simple object to define the paths to our pages.
   const routes = {
-    home: "/index.html",
-    login: "/pages/auth/login.html",
-    signup: "/pages/auth/signup.html",
-    post: "/pages/questgiver/postquest.html",
-    questview: "/pages/quests/questBoard.html"
+    home: "index.html",
+    login: "pages/auth/login.html",
+    signup: "pages/auth/signup.html",
+    post: "pages/questgiver/postquest.html",
+    questview: "pages/quests/questBoard.html"
   };
 
   // An object to handle user authentication using the browser's localStorage.
@@ -53,7 +53,7 @@
       // Don't redirect when already redirected, on quest board, or on admin pages
       if (alreadyRedirected || currentPage === "questBoard.html" || currentPage === "admin.html") return;
       sessionStorage.setItem(this.redirectKey, "1");
-      location.href = "questBoard.html";
+      location.href = "pages/quests/questBoard.html";
     },
 
     redirectKey: "ll_redirected_questview"
