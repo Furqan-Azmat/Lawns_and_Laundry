@@ -3,11 +3,19 @@
 A static prototype for a quest-style marketplace that lets neighbours post chores (lawn, laundry, errands) and adventurers pick them up.
 
 ## Quick start
-- Open `index.html` directly in a browser or run via the live server extension
-- All data is client-side; refresh clears demo state except login stored in localStorage.
-- To access admin dashboards via login page:
-- Login = admin
-- password = admin123
+- Open index.html directly in a browser or run via the live server extension
+- All data is client-side; refresh clears demo state except login stored in localStorage.- To access admin dashboards via login page:
+        Login = admin
+    password = admin123
+
+
+## Implementation approach
+- **Architecture:** Pure HTML/CSS/JS prototype; no build tools or backend. Pages share a single stylesheet (`assets/css/styles.css`) and a shared script (`assets/js/script.js`).
+- **Routing & structure:** Flat file routing; primary pages at root, role-specific flows grouped under `pages/` (auth, quest giver, adventurer, quests, dashboard, admin, support).
+- **State & auth:** Demo auth stored in `localStorage`; any non-empty credentials log in, with a special `admin/admin123` path to admin pages. Session-only redirect guard uses `sessionStorage` to send logged-in users to the quest board once per session.
+- **Forms:** Client-side validation only; quest posting and signup show inline messages and simple success UX, but do not persist to a server.
+- **Styling:** Single global stylesheet with all styling
+- **Accessibility & UX:** Nav links set `aria-current`, skip links on quest pages, keyboard-focusable CTAs, and password show/hide toggles for usability.
 
 ## Pages
 - Landing + services: `index.html`, `services.html`.
@@ -24,10 +32,10 @@ A static prototype for a quest-style marketplace that lets neighbours post chore
 - Logged-in users are redirected to the quest board once per session; guarded links (Post a Quest) bounce to login with a return URL.
 
 ## Project structure
-- `assets/css/styles.css`: global styles and layout.
-- `assets/js/script.js`: shared client logic and demo behaviours.
-- `pages/`:  feature pages grouped by role (auth, quest giver, adventurer, quests, dashboard, admin, support).
-- `images/`, `assets/fonts/`: UI assets.
+- `assets/css/styles.css` - global styles and layout.
+- `assets/js/script.js` - shared client logic and demo behaviours.
+- `pages/` - feature pages grouped by role (auth, quest giver, adventurer, quests, dashboard, admin, support).
+- `images/`, `assets/fonts/` - UI assets.
 
 ## Development notes
 - There is no backend; replace the fake auth/localStorage logic with real API calls for production.
